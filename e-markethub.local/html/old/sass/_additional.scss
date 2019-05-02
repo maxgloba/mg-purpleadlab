@@ -1,0 +1,345 @@
+$screen-sm-min: 'min-width: 768px';
+$screen-lg-min: 'min-width: 1200px';
+
+
+.wrapper {
+    width: 310px;
+    margin: 0 auto;
+
+    @media ($screen-sm-min) {
+        width: 750px;
+    }
+
+    @media ($screen-lg-min) {
+        width: 1200px;
+    }
+}
+
+.content {
+    &__wrapper {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
+    &__logo {
+        margin: 0;
+        padding: 5px 10px;
+        color: #fff;
+
+        @media ($screen-sm-min) {
+            padding: 20px 0;
+        }
+    }
+}
+
+.number {
+    color: #909496;
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+    margin-left: 20px;
+}
+
+.second {
+    margin-top: 20px;
+}
+
+// Start slide
+
+.start {
+
+    &-item {
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    &-label {
+
+        &__span {
+            font-weight: 400;
+            font-size: 1rem;
+            display: block;
+        }
+    }
+
+    &-title-wrapper {
+
+        @media ($screen-lg-min) {
+            width: 50%;
+        }
+    }
+
+    &-content-wrapper {
+
+        @media ($screen-lg-min) {
+            width: 50%;
+        }
+    }
+
+    &-list-wrapper {
+        @media ($screen-sm-min) {
+            display: flex;
+            align-items: center;
+            width: 80%;
+            margin: 80px auto;
+        }
+    
+        @media ($screen-lg-min) {
+            display: block;
+            margin: 0;
+        }
+    }
+}
+
+// ../Start slide
+
+
+// Social slide
+
+.social {
+
+    &-title-wrapper {
+        
+        @media ($screen-lg-min) {
+            width: 50%;
+        }
+    }
+
+    &-content-wrapper {
+
+        @media ($screen-lg-min) {
+            width: 50%;
+        }
+    }
+
+    &-list-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    
+        @media ($screen-sm-min) {
+            width: 50%;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+    
+        @media ($screen-lg-min) {
+            width: 100%;
+        }
+    }
+
+    &-item {
+        width: 50%;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            color: #28A3EF;
+        }
+
+        @media ($screen-sm-min) {
+            width: 35%;
+        }
+
+        @media ($screen-lg-min) {
+            width: 50%;
+        }
+    }
+
+    &__submit-btn {
+        margin-top: 25px;
+        font-weight: 700;
+
+        @media ($screen-sm-min) {
+            margin-top: 60px;
+        }
+
+        @media ($screen-lg-min) {
+            text-align: center;
+            margin-right: 14%;
+        }
+    }
+}
+
+// ../Social slide
+
+// Text slide
+.text {
+
+    &-list {
+        @media ($screen-sm-min) {
+            width: 40%;
+            margin: 100px auto;
+        }
+
+        @media ($screen-lg-min) {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    &-item {
+        width: 60%;
+        margin: 10px auto;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        @media ($screen-lg-min) {
+            width: 100%;
+            margin-top: 40px;
+            margin-left: 0;
+        }
+    }
+    
+    &-title-wrapper {
+        @media ($screen-lg-min) {
+            width: 50%;
+        }
+    }
+
+    &-content-wrapper {
+        @media ($screen-lg-min) {
+            width: 50%;
+        }
+    }
+}  
+
+// ../Text slide
+
+
+// Advertise slide
+
+.advertise {
+
+    &-content-wrapper {
+
+        @media ($screen-lg-min) {
+            width: 50%;
+        }
+    }
+
+    &-list-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    
+        @media ($screen-sm-min) {
+            width: 50%;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+    
+        @media ($screen-lg-min) {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    &-title-wrapper {
+
+        @media ($screen-lg-min) {
+            width: 50%;
+        }
+    }
+
+    &-item {
+        width: 50%;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+
+        &:hover {
+            color: #28A3EF;
+        }
+
+        &:hover .slide-form__advertise-label:before {
+            border: 1px solid #28A3EF;
+        }
+    }
+
+    &__submit-btn {
+        margin-top: 80px;
+
+        @media ($screen-lg-min) {
+            text-align: center;
+            margin-right: 14%;
+        }
+    }
+}
+
+// ../Advertise slide
+
+// Finish slide
+
+.finish {
+
+    &__wrapper {
+        margin-top: 50%;
+
+        @media ($screen-sm-min) {
+            margin-top: 20%;
+        }
+
+        @media ($screen-lg-min) {
+            margin-top: 0;
+        }
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        margin: 0;
+
+        @media ($screen-sm-min) {
+            font-size: 4rem;
+        }
+    }
+
+    &__descr {
+        font-size: 1rem;
+        margin: 0;
+        color: #838687;
+
+        @media ($screen-sm-min) {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+// ../Finish slide
+
+span {
+    font-size: 0.8rem;
+}
+
+.border {
+    animation: border .4s ease;
+}
+
+#socialSubmit {
+    display: none;
+}
+
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes border {
+    0% {
+        border: #000;
+    } 50% {
+        color: #28A3EF;
+    } 100% {
+        border: #000;
+    }
+}

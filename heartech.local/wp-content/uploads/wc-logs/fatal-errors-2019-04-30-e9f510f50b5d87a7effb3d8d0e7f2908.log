@@ -1,0 +1,127 @@
+2019-04-30T11:36:00+00:00 CRITICAL syntax error, unexpected '}' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 151
+
+2019-04-30T11:36:18+00:00 CRITICAL syntax error, unexpected '}' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 151
+
+2019-04-30T11:36:23+00:00 CRITICAL syntax error, unexpected '}' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 151
+
+2019-04-30T11:36:44+00:00 CRITICAL syntax error, unexpected '}' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 151
+
+2019-04-30T11:36:45+00:00 CRITICAL syntax error, unexpected '}' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 151
+
+2019-04-30T11:36:50+00:00 CRITICAL syntax error, unexpected '}' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 151
+
+2019-04-30T11:36:59+00:00 CRITICAL syntax error, unexpected '}' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 151
+
+2019-04-30T11:37:00+00:00 CRITICAL syntax error, unexpected '}' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 151
+
+2019-04-30T11:37:01+00:00 CRITICAL syntax error, unexpected '}' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 151
+
+2019-04-30T11:37:01+00:00 CRITICAL syntax error, unexpected '}' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 151
+
+2019-04-30T11:37:16+00:00 CRITICAL syntax error, unexpected '}' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 151
+
+2019-04-30T11:38:20+00:00 CRITICAL syntax error, unexpected '}' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 151
+
+2019-04-30T11:38:22+00:00 CRITICAL syntax error, unexpected '}' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 151
+
+2019-04-30T11:41:19+00:00 CRITICAL syntax error, unexpected '}' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 164
+
+2019-04-30T11:41:23+00:00 CRITICAL syntax error, unexpected '}' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 164
+
+2019-04-30T11:41:24+00:00 CRITICAL syntax error, unexpected '}' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 164
+
+2019-04-30T11:41:25+00:00 CRITICAL syntax error, unexpected '}' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 164
+
+2019-04-30T11:41:25+00:00 CRITICAL syntax error, unexpected '}' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 164
+
+2019-04-30T11:41:25+00:00 CRITICAL syntax error, unexpected '}' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 164
+
+2019-04-30T11:41:25+00:00 CRITICAL syntax error, unexpected '}' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 164
+
+2019-04-30T11:41:26+00:00 CRITICAL syntax error, unexpected '}' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 164
+
+2019-04-30T11:41:26+00:00 CRITICAL syntax error, unexpected '}' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 164
+
+2019-04-30T11:41:51+00:00 CRITICAL syntax error, unexpected '}' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 164
+
+2019-04-30T11:55:18+00:00 CRITICAL Uncaught Error: Call to undefined function storefront_is_woocommerce_activated() in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/404.php:23
+Stack trace:
+#0 /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-includes/template-loader.php(77): include()
+#1 /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-blog-header.php(19): require_once('/home/adlabfact...')
+#2 /home/adlabfactory/public_html/e-markethub.com/quiz/woo/index.php(17): require('/home/adlabfact...')
+#3 {main}
+  thrown in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/404.php on line 23
+
+2019-04-30T11:55:19+00:00 CRITICAL syntax error, unexpected 'die' (T_EXIT) in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 176
+
+2019-04-30T11:55:21+00:00 CRITICAL syntax error, unexpected 'die' (T_EXIT) in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 176
+
+2019-04-30T11:55:22+00:00 CRITICAL syntax error, unexpected 'die' (T_EXIT) in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 176
+
+2019-04-30T11:55:46+00:00 CRITICAL Object of class WC_Cart could not be converted to string in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 165
+
+2019-04-30T13:15:58+00:00 CRITICAL syntax error, unexpected ';' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 163
+
+2019-04-30T13:16:48+00:00 CRITICAL syntax error, unexpected ';' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 164
+
+2019-04-30T13:16:58+00:00 CRITICAL syntax error, unexpected ';' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 163
+
+2019-04-30T13:17:00+00:00 CRITICAL syntax error, unexpected ';' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 163
+
+2019-04-30T13:17:00+00:00 CRITICAL syntax error, unexpected ';' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 163
+
+2019-04-30T13:17:00+00:00 CRITICAL syntax error, unexpected ';' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 163
+
+2019-04-30T13:17:00+00:00 CRITICAL syntax error, unexpected ';' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 163
+
+2019-04-30T13:17:00+00:00 CRITICAL syntax error, unexpected ';' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 163
+
+2019-04-30T13:17:26+00:00 CRITICAL syntax error, unexpected ';' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 163
+
+2019-04-30T13:18:21+00:00 CRITICAL Uncaught Error: Call to undefined function remove_from_cart() in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php:163
+Stack trace:
+#0 /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-includes/class-wp-hook.php(286): removeProduct('')
+#1 /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#2 /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-admin/admin-ajax.php(167): do_action('wp_ajax_removeP...')
+#4 {main}
+  thrown in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 163
+
+2019-04-30T13:19:02+00:00 CRITICAL Uncaught Error: Call to undefined function remove_from_cart() in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php:164
+Stack trace:
+#0 /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-includes/class-wp-hook.php(286): removeProduct('')
+#1 /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#2 /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-admin/admin-ajax.php(167): do_action('wp_ajax_removeP...')
+#4 {main}
+  thrown in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 164
+
+2019-04-30T13:19:04+00:00 CRITICAL Uncaught Error: Call to undefined function remove_from_cart() in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php:164
+Stack trace:
+#0 /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-includes/class-wp-hook.php(286): removeProduct('')
+#1 /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#2 /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-admin/admin-ajax.php(167): do_action('wp_ajax_removeP...')
+#4 {main}
+  thrown in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 164
+
+2019-04-30T13:21:54+00:00 CRITICAL syntax error, unexpected ')', expecting ']' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 170
+
+2019-04-30T13:22:06+00:00 CRITICAL syntax error, unexpected ')', expecting ']' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 167
+
+2019-04-30T13:22:09+00:00 CRITICAL syntax error, unexpected ')', expecting ']' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 167
+
+2019-04-30T13:22:09+00:00 CRITICAL syntax error, unexpected ')', expecting ']' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 167
+
+2019-04-30T13:22:09+00:00 CRITICAL syntax error, unexpected ')', expecting ']' in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/themes/storefront/functions.php on line 167
+
+2019-04-30T13:35:17+00:00 CRITICAL Uncaught Error: Call to undefined function remove_from_cart() in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/plugins/woocommerce/templates/cart/cart.php:66
+Stack trace:
+#0 /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/plugins/woocommerce/includes/wc-core-functions.php(249): include()
+#1 /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-cart.php(93): wc_get_template('cart/cart.php')
+#2 /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php(72): WC_Shortcode_Cart::output(Array)
+#3 /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php(85): WC_Shortcodes::shortcode_wrapper(Array)
+#4 /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-includes/shortcodes.php(325): WC_Shortcodes::cart('', '', 'woocommerce_car...')
+#5 [internal function]: do_shortcode_tag(Array)
+ in /home/adlabfactory/public_html/e-markethub.com/quiz/woo/wp-content/plugins/woocommerce/templates/cart/cart.php on line 66
+

@@ -1,0 +1,148 @@
+PC pin:
+purple2018
+
+Email:
+max@purpleadlab.com
+7%QCk43$mjnT(A7]
+
+Thezense CPanel:
+https://192.64.112.12:2083/logout/?locale=en
+thezense
+purpleadlabqUGaNo#D6
+
+https://thezense.com/offer/01/
+https://thezense.com/offer/01/wp-admin
+admin
+qwerty123456
+
+
+paypal test acc
+testtesttest@buyer.com
+562389562389
+
+testtesttest@test.net
+562389562389
+
+
+
+
+
+-----------------------------------------
+
+Stripe Test acc
+
+Publishable key:
+pk_test_nmdgYrsaZhPry4KxWK3tUVqD
+
+Secret key:
+sk_test_HkZTRLCwi0opaHN5WQLn8yaK
+
+Premium Package ID:
+prod_ElnYncfV1hnF3r
+
+-----------------------------------------
+
+PayPal test acc
+
+Token:
+DriPbxs_2Oq-IGHPvmFBBgypoAdj8vapqMrGoQ4Uc6sGJN32RP-rus4zx6u
+
+Premium Package ID:
+QWHPCLNMK9BJ8
+
+-----------------------------------------
+
+
+-----------------------------------------
+
+Stripe Live acc
+
+Publishable key:
+pk_test_nmdgYrsaZhPry4KxWK3tUVqD
+
+Secret key:
+sk_test_HkZTRLCwi0opaHN5WQLn8yaK
+
+Premium Package ID:
+prod_Ep3NziOWGV02XT
+
+-----------------------------------------
+
+PayPal Live acc
+
+Token:
+YAB7BfQ-jIbgHwntzF1sehKx6Unors-2-l7kifRoiji1siSlryl52w0kBTy
+
+Premium Package ID:
+FPBPV72K2XBBN
+
+-----------------------------------------
+
+
+_______________________________________________________________________
+
+https://e-markethub.com/quiz/v2/
+
+https://192.64.112.12:2087/
+root
+o0HnxUgCp1G2nlhYPpU2
+
+SFTP
+
+HTML
+/home/adlabfactory/public_html/e-markethub.com/v2
+
+FTP local
+/home/adlabfactory/public_html/e-markethub.com/quiz/v1
+
+CPanel
+https://192.64.112.12:2087/xfercpanel
+
+WP
+http://e-markethub.com/quiz/v1/
+http://e-markethub.com/quiz/v1/wp-admin/
+admin
+qwerty123456
+
+MySql
+adlabfac_quiz
+adlabfac_quiz
+D[EDg3{Ge5bS
+
+Instructions:
+http://ipic.su/img/img7/fs/kiss_107kb.1554882062.jpg
+
+-----
+
+WP
+http://e-markethub.com/quiz/v4/
+http://e-markethub.com/quiz/v4/wp-admin/
+admin
+qwerty123456
+
+MySql
+adlabfac_quiz_v4
+adlabfac_quiz_v4
+D[EDg3{Ge5bS
+
+-----
+
+WP
+http://e-markethub.com/quiz/woo/
+http://e-markethub.com/quiz/woo/wp-admin/
+admin
+qwerty123456
+
+MySql
+adlabfac_woo
+adlabfac_woo
+D[EDg3{Ge5bS
+
+_______________________________________________________________________
+
+
+
+
+
+heartech_woo
+z%r3V3)dY!=;

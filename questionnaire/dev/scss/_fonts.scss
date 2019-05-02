@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Bold.eot');
+    src: local('Gilroy Bold'), local('Gilroy-Bold'),
+        url('../fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-Bold.woff') format('woff'),
+        url('../fonts/Gilroy-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700);
+html, body, *{
+	font-family: 'Roboto', sans-serif;
+}

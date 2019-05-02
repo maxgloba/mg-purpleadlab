@@ -1,0 +1,113 @@
+body .acf-field-object-tab, body .acf-field-object-accordion, body .acf-field.acf-accordion .acf-accordion-title {
+	background: #aaccff29;
+}
+body .acf-postbox.seamless>.acf-fields>.acf-field.acf-accordion{
+	border-color: #0085ba;
+}
+body .acf-postbox.seamless>.acf-fields>.acf-field.acf-accordion+.acf-field.acf-accordion{
+	margin-top: 10px;
+}
+
+#quiz_info{
+	max-width: 100%;
+	padding-right: 20px;
+}
+#quiz_info>div{
+	border-top:2px solid #fff;
+}
+	#quiz_info>div:first-child{
+		border-bottom: none;
+	}
+#quiz_info .quiz-title{
+	cursor: pointer;
+	font-size: 16px;
+	display: block;
+	background: #23282d;
+	color: #fff;
+	padding: 0 15px;
+	height: 50px;
+	line-height: 50px;
+	box-sizing: border-box;
+}
+	#quiz_info .quiz-title:hover{
+		color: #00b9eb;
+	}
+	#quiz_info .active .quiz-title{
+		background: #0073aa;
+		color: #fff !important;
+	}
+		#quiz_info .quiz-title em{
+			display: block;
+			float: right;
+		}
+
+#quiz_info{
+	padding-top: 15px;
+}
+#quiz_info .quiz-content{
+	font-size: 16px;
+	font-weight: 600;
+	display: none;
+	background: #23282d;
+	color: #fff;
+	padding: 5px 15px 15px 15px;
+	box-sizing: border-box;
+}
+	#quiz_info .active .quiz-content > div{
+		margin-top: 10px;
+	}
+		#quiz_info .quiz-content span{
+			display: inline-block;
+			vertical-align: top;
+			line-height: 20px;
+			font-size: 12px;
+			font-weight: 400;
+			width: 50px;
+		}
+		#quiz_info .quiz-content form{
+			position: relative;
+			width: 230px;
+		}
+		#quiz_info .quiz-content form select{
+			display: block;
+			float: left;
+			height: 26px;
+			padding: 0;
+			margin: 0 2px 0 0;
+			border:none;
+			background: #0073aa;
+			color: #fff;
+			font-size: 12px;
+			font-weight: 400;
+		}
+		#quiz_info .quiz-content form input[type="submit"]{
+			text-transform: uppercase;
+			font-size: 10px;
+			font-weight: 400;
+			background: #0073aa;
+			color: #fff;
+			border:none;
+			height: 26px;
+			display: block;
+			margin: 0;
+			padding: 0 10px;
+		}
+
+.answers-list{
+	padding-left: 60px;
+}
+	.answers-list h2 {
+		margin: 0;
+		font-size: 12px;
+		color: #fff;
+	}
+	.answers-list ul {
+		margin: 0 0 10px;
+		padding-left: 15px;
+		list-style-type: circle;
+	}
+		.answers-list ul li {
+			list-style: disc inside;
+			font-size: 13px;
+			margin: 0;
+		}

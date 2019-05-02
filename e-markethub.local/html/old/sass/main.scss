@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
+@import './adjustements';
+@import './additional';
+
+$screen-sm-min: 'min-width: 768px';
+$screen-lg-min: 'min-width: 1200px';
+
+.swiper {
+
+    &-container {
+        height: 800px;
+    }
+
+    &-wrapper {
+        width: 280px;
+        margin: 10% auto;
+        text-align: center;
+
+        @media ($screen-sm-min) {
+            width: 750px;
+            margin: 30% auto;
+        }
+
+        @media ($screen-lg-min) {
+            text-align: left;
+        }
+    }
+
+    &-slide {
+
+        @media ($screen-lg-min) {
+            margin-top: -10%;
+        }
+    }
+
+    &-slide__content {
+        @media ($screen-lg-min) {
+            display: flex;
+        }
+    }
+}
+
+.slide {
+
+    &-content__title-wrapper {
+
+        @media ($screen-lg-min) {
+            width: 50%;
+        }
+    }
+
+    &-title {
+        font-size: 2rem;
+        margin: 0;
+
+        @media ($screen-sm-min) {
+            font-size: 4rem;
+        }
+
+        @media ($screen-lg-min) {
+            font-size: 2.25rem;
+            width: 50%;
+        }
+    }
+
+    &-descr {
+        font-size: 0.8rem;
+
+        @media ($screen-sm-min) {
+            font-size: 1rem;
+        }
+
+        @media ($screen-lg-min) {
+            font-size: 0.875rem;
+        }
+
+        &__wrapper {
+            margin-top: 40px;
+        }
+    }
+
+    &-btn {
+        color: #000;
+        transition: all .5s ease;
+        height: 100%;
+        line-height: 40px;
+        font-weight: 600;
+
+        @media ($screen-sm-min) {
+            font-size: 1.2rem;
+            line-height: 50px;
+        }
+
+        &__container {
+            margin-top: 20%;
+
+            @media ($screen-sm-min) {
+                margin-top: 60px;
+            }
+
+            @media ($screen-lg-min) {
+                widtH: 50%;
+            }
+        }
+
+        &__wrapper {
+            margin-top: 40px;
+            margin: 20px auto;
+            border-radius: 20px;
+            width: 150px;
+            height: 40px;
+            border: 1px solid #000;
+            cursor: pointer;
+            transition: all .5s ease;
+
+            &:hover, &:active {
+                color: #28A3EF;
+                border: 1px solid #28A3EF;
+            }
+
+            @media ($screen-sm-min) {
+                width: 200px;
+                height: 50px;
+                border-radius: 50px;
+            }
+
+            @media ($screen-lg-min) {
+                text-align: center;
+            }
+
+            &:hover .slide-btn {
+                color: #28A3EF;
+            }
+
+        }
+
+        &__title {
+            margin: 0;
+
+            @media ($screen-sm-min) {
+                font-size: 2rem;
+                font-weight: 600;
+            }
+
+            @media ($screen-lg-min) {
+                text-align: center;
+            }
+        }
+
+    }
+
+    &-form {
+
+        &__list {
+            margin-top: 40px;
+        }
+
+        &__item {
+            cursor: pointer;
+            position: relative;
+            height: 40px;
+            margin-top: 10px;
+            transition: all .5s ease;
+
+            &:hover .slide-form__social-label:before {
+                border: 1px solid #28A3EF;
+            }
+
+            &:hover .slide-form__social-par {
+                color: #28A3EF;
+            }
+
+            & input:checked ~ .slide-form__social-par {
+                display: none;
+            }
+
+            & input:checked ~ .slide-form__social-label:after {
+                content: url(../img/Union.png);
+                position: absolute;
+                top: 12px;
+                left: 15px;
+            }
+
+            & input:checked ~ .slide-form__social-label  {
+                color: #28A3EF;
+            }
+
+            & input:checked ~ .slide-form__social-label:before {
+                border: 1px solid #28A3EF;
+            }
+
+            & input:checked ~ .slide-form__advertise-label  {
+                color: #28A3EF;
+            }
+
+            & input:checked ~ .slide-form__advertise-label:before {
+                border: 1px solid #28A3EF;
+            }
+            
+            & input:checked ~ .slide-form__advertise-par {
+                color: #28A3EF;
+            }
+
+            @media ($screen-lg-min) {
+                margin-top: 30px;
+            }
+
+        }
+
+        &__object {
+            margin: 0;
+            margin-top: 50%;
+            transform: translateY(-50%);
+            text-transform: uppercase;
+
+            &-wrapper {
+                border: 1px solid #000;
+                border-radius: 50%;
+                padding: 15px;
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        &__descr {
+
+            &-title {
+                margin: 0;
+            }
+
+            &-par {
+                margin: 0;
+                transition: all .5s ease;
+            }
+
+            &-wrapper {
+                text-align: left;
+                margin-left: 20px;
+            }
+        }
+
+// Start slide
+
+        &__start {
+            opacity: 0;
+            margin: 0;
+            text-align: left;
+
+            &-item {
+                position: relative;
+            }
+
+            &-label {
+                cursor: pointer;
+                transition: all .5s ease;
+                margin-left: 40px;
+                font-weight: 700;
+                text-align: left;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    height: 10px;
+                    width: 10px;
+                    padding: 15px;
+                    border-radius: 50%;
+                    border: 1px solid #000; 
+                    transition: all 1s ease;
+                    cursor: pointer;  
+                    transition: all .5s ease;
+                    z-index: 9;
+                }
+
+                &__span {
+                    font-weight: 400;
+                }
+            }
+
+            &-par {
+                margin: 0;
+                position: absolute;
+                top: 12px;
+                left: 15px;
+                z-index: 1;
+            }
+        }        
+
+// ../Start slide
+
+// 1st Slide
+
+        &__social {
+            opacity: 0;
+            margin: 0;
+            text-align: left;
+
+            &-label {
+                cursor: pointer;
+                transition: all .5s ease;
+                margin-left: 40px;
+                font-weight: 700;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    height: 10px;
+                    width: 10px;
+                    padding: 15px;
+                    border-radius: 50%;
+                    border: 1px solid #000; 
+                    transition: all 1s ease;
+                    cursor: pointer;  
+                    transition: all .5s ease;
+                    z-index: 9;
+                }
+            }
+
+            &-par {
+                margin: 0;
+                position: absolute;
+                top: 12px;
+                left: 15px;
+                z-index: 1;
+            }
+        }
+
+        &__btn {
+            color: #000;
+            font-weight: 600;
+            line-height: 40px;
+            transition: all .5s ease;
+            animation: fadeIn 1s ease;
+
+            @media ($screen-sm-min) {
+                font-size: 1.2rem;
+                line-height: 50px;
+            }
+
+            &-wrapper {
+                margin-top: 40px;
+                margin: 20px auto;
+                border-radius: 20px;
+                width: 150px;
+                height: 40px;
+                border: 1px solid #000;
+                cursor: pointer;
+                transition: all .5s ease;
+
+                &:hover, &:active {
+                    color: #28A3EF;
+                    border: 1px solid #28A3EF;
+                }
+
+                &:hover .slide-form__btn {
+                    color: #28A3EF;
+                }
+
+                @media ($screen-sm-min) {
+                    width: 200px;
+                    height: 50px;
+                    border-radius: 50px;  
+                    margin: 60px auto;
+                }
+
+                @media ($screen-lg-min) {
+                    margin-right: 15%;
+                }
+            }
+        }
+
+// ../1st Slide
+
+// 2nd Slide
+
+        &__text {
+            opacity: 0;
+            margin: 0;
+
+            &-label {
+                margin-left: 40px;
+                font-weight: 700;
+                cursor: pointer;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    height: 10px;
+                    width: 10px;
+                    padding: 15px;
+                    border-radius: 50%;
+                    border: 1px solid #000; 
+                    cursor: pointer;  
+                    transition: all .5s ease;
+                    z-index: 9;
+                }
+            }
+
+            &-par {
+                position: absolute;
+                top: -4px;
+                left: 15px;
+                z-index: 1;
+            }
+        }
+
+// ../2nd Slide
+
+// 3rd Slide
+
+        &__advertise {
+            margin: 0;
+            opacity: 0;
+
+            &-label {
+                margin-left: 40px;
+                font-weight: 700;
+                cursor: pointer;
+                text-align: left;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    height: 10px;
+                    width: 10px;
+                    padding: 15px;
+                    border-radius: 50%;
+                    border: 1px solid #000; 
+                    cursor: pointer;  
+                    transition: all .5s ease;
+                    z-index: 9;
+                }
+            }
+
+            &-par {
+                position: absolute;
+                top: -4px;
+                left: 15px;
+                z-index: 1;
+            }
+
+            &-btn {
+                color: #000;
+                height: 100%;
+                line-height: 40px;
+                font-weight: 600;
+                transition: all .5s ease;
+
+                &__wrapper {
+                    margin-top: 40px;
+                    margin: 20px auto;
+                    border-radius: 20px;
+                    width: 150px;
+                    height: 40px;
+                    border: 1px solid #000;
+                    cursor: pointer;
+                    transition: all .5s ease;
+
+                    &:hover, &:active {
+                        color: #28A3EF;
+                        border: 1px solid #28A3EF;
+                    }
+
+                    &:hover .slide-form__advertise-btn {
+                        color: #28A3EF;
+                    }
+                }
+            }
+        }
+
+// ../3rd Slide
+
+    }
+}
+
+
+
+// Animation
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+} 
+
+@keyframes fontAnimation {
+    0% {font-size: 2.5rem;}
+    50% {font-size: 3rem;}
+    100% {font-size: 2.5rem;}
+}

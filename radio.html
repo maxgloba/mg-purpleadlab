@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<body>
+		<ul id="list_1">
+			<li><input type="radio" name="list_1" id="radio_1" value="Radio radio_1"><label for="radio_1">Radio radio_1</label></li>
+			<li><input type="radio" name="list_1" id="radio_2" value="Radio radio_2"><label for="radio_2">Radio radio_2</label></li>
+			<li><input type="radio" name="list_1" id="radio_3" value="Radio radio_3"><label for="radio_3">Radio radio_3</label></li>
+		</ul>
+		<ul id="list_2">
+			<li><input type="radio" name="list_2" id="radio_4" value="Radio radio_4"><label for="radio_4">Radio radio_4</label></li>
+			<li><input type="radio" name="list_2" id="radio_5" value="Radio radio_5"><label for="radio_5">Radio radio_5</label></li>
+			<li><input type="radio" name="list_2" id="radio_6" value="Radio radio_6"><label for="radio_6">Radio radio_6</label></li>
+		</ul>
+		<ul id="list_3">
+			<li><input type="radio" name="list_3" id="radio_7" value="Radio radio_7"><label for="radio_7">Radio radio_7</label></li>
+			<li><input type="radio" name="list_3" id="radio_8" value="Radio radio_8"><label for="radio_8">Radio radio_8</label></li>
+			<li><input type="radio" name="list_3" id="radio_9" value="Radio radio_9"><label for="radio_9">Radio radio_9</label></li>
+		</ul>
+		<style>
+			ul{
+				transition: 0.5s ease-in-out;
+				overflow: hidden;
+				margin: 0;
+			}
+			ul.hide{
+				height: 0px !important;
+			}
+		</style>
+		<script>
+			var radioButtons = document.querySelectorAll('input');
+			for (var i = 0, len = radioButtons.length; i < len; i++) {
+				radioButtons[i].addEventListener('click', function(e){
+					var radioName = e.target.getAttribute("name");
+					if( e.target.checked ){
+						var
+							list = document.getElementById(radioName),
+							listHeight = list.offsetHeight+'px';
+						list.style.height = listHeight;
+						setTimeout(function(){
+							list.className += "hide";
+						}, 500);
+					}
+				});
+			}
+		</script>
+	</body>
+</html>

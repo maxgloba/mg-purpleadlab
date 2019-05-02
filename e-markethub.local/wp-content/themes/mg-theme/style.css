@@ -1,0 +1,98 @@
+/*
+Theme Name: MG theme
+Author: MaxGloba
+Author URI: https://www.instagram.com/onyx1812/
+Description: Private WordPress theme, powered by MaxGloba
+Version: 1.0
+Tags: WordPress, theme, Bootstrap, MG, MaxGloba, Web developer
+*/
+
+#result {
+    padding-top: 15px;
+}
+
+
+#contactForm ::-webkit-input-placeholder,
+#contactForm ::-moz-placeholder,
+#contactForm :-ms-input-placeholder,
+#contactForm :-moz-placeholder {
+  opacity: 1;
+  color: #000;
+}
+
+#contactForm {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+}
+	#contactForm h2 {
+	    text-align: center;
+	    margin-bottom: 30px;
+	}
+	#contactForm ul {
+	    margin-right: -15px;
+	    margin-left: -15px;
+	}
+		#contactForm ul:before, #contactForm ul:after {
+		    content: "";
+		    display: block;
+		    clear: both;
+		}
+			#contactForm li {
+			    display: block;
+			    width: 100%;
+			    padding: 0 15px;
+			    box-sizing: border-box;
+			    float: left;
+			    margin-bottom: 15px;
+			}
+			    @media(min-width:768px){
+			    	#contactForm li {
+			    		width: 50%;
+			    	}
+			    }
+			#contactForm input {
+			    display: block;
+			    height: 50px;
+			    padding: 0 15px;
+			    width: 100%;
+			    box-sizing: border-box;
+			    border-radius: 22px;
+			    border: 1px solid #000;
+			    font-size: 16px;
+			    color: #000;
+			    font-weight: 600;
+			    background: none;
+			    outline: none !important;
+			    transition: all .5s ease;
+			}
+			#contactForm input:focus {
+			    border-color: #28a3ef;
+			}
+			#contactForm input:placeholder{
+				opacity: 0;
+			}
+			#contactForm input[type="submit"] {
+			    transition: all .5s ease;
+			    cursor: pointer;
+			    width: 200px;
+				margin: 0 auto;
+
+			}
+			@media(min-width:768px){
+			    	#contactForm input[type="submit"] {
+			    		width: 80%;
+			    		margin: 0;
+			    	}
+			    }
+				#contactForm input[type="submit"]:hover {
+				    color: #28a3ef;
+				    border-color: #28a3ef;
+				}
+				#contactForm input:-internal-autofill-previewed, #contactForm input:-internal-autofill-selected,
+				#contactForm textarea:-internal-autofill-previewed, #contactForm textarea:-internal-autofill-selected,
+				#contactForm select:-internal-autofill-previewed, #contactForm select:-internal-autofill-selected {
+				    background-color: rgba(0, 0, 0, 0) !important;
+				    background-image: none !important;
+				    color: rgb(0, 0, 0) !important;
+				}
