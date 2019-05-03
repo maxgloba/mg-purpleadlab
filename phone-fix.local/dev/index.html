@@ -1,0 +1,204 @@
+<!-- include header -->
+//= include/header.html
+
+<!-- content -->
+<section class="content-form">
+
+	<div class="form-wrapper" id="step1Box">
+		<span class="text">I need help with my</span>
+		<span class="select select-phone modalOpen" data-modal="phone">Select phone</span>
+		<span class="text">for</span>
+		<span class="select select-problem modalOpen" data-modal="problem">Select problem</span>
+		<button class="goToStep2">Get started</button>
+	</div>
+
+	<div class="diagnosis-wrapper" id="step2Box">
+		<button class="back backToStep1">Back</button>
+		<div class="diagnosis-inner">
+			<div class="diagnosis-asks">
+				Do you want to <span class="modalOpen" data-modal="diagnosis">save the data?</span>
+			</div>
+			<ul class="diagnosis-options">
+				<li><button>YES</button></li>
+				<li><button>NO</button></li>
+				<li><button>What is it</button><i class="modalOpen" data-modal="diagnosis"></i></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="summary-wrapper" id="step3Box">
+		<div class="summary-inner">
+			Here's the diagnosis summary
+It seems you need partial data recovery.
+Selected repair option
+PARTIAL DATA RECOVERY
+3-5 days
+expected time
+$200
+estimated cost
+We will need to have a closer look at your device to confirm this initial diagnosis.
+For a faster service, please fill out your details below.
+ BOOK ONLINE
+ VISIT US
+ CALL US
+ EMAIL US
+		</div>
+	</div>
+
+	<ul class="progress">
+		<li class="step1">DEVICE & SERVICE <span></span></li>
+		<li class="step2">DIAGNOSIS <span></span></li>
+		<li class="step3">SUMMARY & OPTIONS <span></span></li>
+	</ul>
+
+</section>
+
+<section class="modal modal-phone">
+	<div class="modal-wrapper">
+		<button class="close-modal">×</button>
+		<form class="search">
+			<input type="search" placeholder="Search for your device model">
+			<input type="submit">
+		</form>
+		<span class="fix-title">IPHONE REPAIRS</span>
+		<ul class="phone-list" id="phone-list">
+			<li>
+				<span class="data-fix">IPHONE REPAIRS</span>
+				<ul class="option" >
+					<li>iPhone X</li>
+					<li>iPhone 8 Plus</li>
+					<li>iPhone 8</li>
+					<li>iPhone 7 Plus</li>
+					<li>iPhone 7</li>
+					<li>iPhone 6S Plus</li>
+					<li>iPhone 6S</li>
+					<li>iPhone 6 Plus</li>
+					<li>iPhone 6</li>
+					<li>iPhone 5S</li>
+					<li>iPhone 5C</li>
+					<li>iPhone 5</li>
+					<li>iPhone SE</li>
+					<li>iPhone 4S</li>
+					<li>iPhone 4</li>
+					<li>iPhone 3GS</li>
+				</ul>
+			</li>
+			<li>
+				<span class="data-fix">IPAD REPAIRS</span>
+				<ul class="option" >
+					<li>iPad Pro 12.9</li>
+					<li>iPad Pro 9.7</li>
+					<li>iPad Mini 4</li>
+					<li>iPad Mini 3</li>
+					<li>iPad Mini 2</li>
+					<li>iPad Mini</li>
+					<li>iPad Air 2</li>
+					<li>iPad Air</li>
+					<li>iPad 5th Gen</li>
+					<li>iPad 4</li>
+					<li>iPad 3</li>
+					<li>iPad 2</li>
+					<li>iPad 1 Wi-Fi</li>
+					<li>iPad 1 3G</li>
+				</ul>
+			</li>
+			<li>
+				<span class="data-fix">SAMSUNG REPAIRS</span>
+				<ul class="option" >
+					<li>Galaxy S9 Plus</li>
+					<li>Galaxy S9</li>
+					<li>Galaxy S8 Plus</li>
+					<li>Galaxy S8</li>
+					<li>Galaxy S7 Edge Duos</li>
+					<li>Galaxy S7 Edge</li>
+					<li>Galaxy S7</li>
+					<li>Galaxy S6 Edge Plus</li>
+					<li>Galaxy S6 Edge</li>
+					<li>Galaxy S6</li>
+					<li>Galaxy S5 Series</li>
+					<li>Galaxy S4 Series</li>
+					<li>Galaxy S3 Series</li>
+					<li>Galaxy S2 Series</li>
+					<li>Galaxy S1</li>
+					<li>Galaxy S Duos</li>
+				</ul>
+			</li>
+			<li>
+				<span class="data-fix">OTHER MODELS WE REPAIR</span>
+				<ul class="option" >
+					<li>ASUS Phones</li>
+					<li>BlackBerry Bold</li>
+					<li>BlackBerry Classic</li>
+					<li>BlackBerry Keyone</li>
+					<li>BlackBerry Passport</li>
+					<li>BlackBerry Priv</li>
+					<li>BlackBerry Q Series</li>
+					<li>BlackBerry Torch</li>
+					<li>BlackBerry Z Series</li>
+					<li>Google Pixel</li>
+					<li>Google Pixel XL</li>
+					<li>HTC Desire Series</li>
+					<li>HTC M10</li>
+					<li>HTC One Series</li>
+					<li>HTC Sensation Series</li>
+					<li>HTC Wildfire Series</li>
+					<li>Huawei G/GR Series</li>
+					<li>Huawei Mate</li>
+					<li>Huawei Nexus 6P</li>
+					<li>Huawei P Series</li>
+					<li>LG G5</li>
+					<li>LG K/L Series</li>
+					<li>LG Nexus Series</li>
+					<li>LG Optimus Series</li>
+					<li>LG Prada 3.0</li>
+					<li>Motorola Moto Series</li>
+					<li>Motorola Nexus 6</li>
+					<li>Motorola Razr Series</li>
+					<li>Nokia Lumia Series</li>
+					<li>OnePlus One</li>
+					<li>Oppo F/R Series</li>
+					<li>Sony Xperia Series</li>
+					<li>Sony Z2/Z4 Tablet</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section class="modal modal-problem">
+	<div class="modal-wrapper">
+		<button class="close-modal">×</button>
+		<form class="search">
+			<input type="search" placeholder="Search for your device model">
+			<input type="submit">
+		</form>
+		<ul class="phone-list" id="problem-list">
+			<li>
+				<ul class="option">
+					<li>data recovery</li>
+					<li>liquid damage repair</li>
+					<li>no power up</li>
+					<li>screen repairs</li>
+					<li>software fault</li>
+					<li>other</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section class="modal modal-diagnosis">
+	<div class="modal-wrapper">
+		<button class="close-modal">×</button>
+		<div class="modal-content">
+			<img src="img/datarecovery_popup_03.png" alt="">
+			<div class="modal-content__text">
+				<h2>What is data recovery?</h2>
+				<p>Data recovery is a process used to extract information&nbsp;from&nbsp;electronic devices. Data can be lost for a variety of reasons and we have the solutions to get it back.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- include footer -->
+//= include/footer.html
