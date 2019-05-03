@@ -67,7 +67,7 @@ $(function(){
 		if(phone_Model != undefined && phone_Problem != undefined){
 
 			$('.progress').addClass('active');
-			$('.progress .step1').addClass('active');
+			$('.progress .step2').addClass('active');
 			$('#step1Box').animate({
 				opacity: 0,
 				top: 0,
@@ -93,7 +93,7 @@ $(function(){
 	$(document).on('click', '.backToStep1', function(e){
 		e.preventDefault();
 		$('.progress').removeClass('active');
-		$('.progress .step1').removeClass('active');
+		$('.progress .step2').removeClass('active');
 		$('#step2Box').removeClass('active');
 		setTimeout(function(){
 			$('#step1Box').animate({
@@ -104,13 +104,24 @@ $(function(){
 		}, 300);
 	});
 
+
 	$(document).on('click', '.diagnosis-options button', function(e){
 		e.preventDefault();
 		phone_Diagnosis = $(this).html();
 		$('#step2Box').addClass('active-hide');
-		$('.progress .step2').addClass('active');
+		$('.progress .step3').addClass('active');
 		setTimeout(function(){
 			$('#step3Box').addClass('active');
+		}, 150);
+		console.log(phone_Diagnosis);
+	});
+
+	$(document).on('click', '.backToStep2', function(e){
+		e.preventDefault();
+		$('#step3Box').removeClass('active');
+		$('.progress .step3').removeClass('active');
+		setTimeout(function(){
+			$('#step2Box').removeClass('active-hide');
 		}, 150);
 		console.log(phone_Diagnosis);
 	});

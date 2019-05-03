@@ -53,26 +53,37 @@
 	</div>
 
 	<div class="summary-wrapper" id="step3Box">
+		<button class="back backToStep2">Back</button>
 		<div class="summary-inner">
-			Here's the diagnosis summary
-It seems you need partial data recovery.
-Selected repair option
-PARTIAL DATA RECOVERY
-3-5 days
-expected time
-$200
-estimated cost
-We will need to have a closer look at your device to confirm this initial diagnosis.
-For a faster service, please fill out your details below.
- BOOK ONLINE
- VISIT US
- CALL US
- EMAIL US
+			<h2>Here's the diagnosis summary</h2>
+			<div class="summary-content">
+				<div class="summary-content__left">
+					<div class="summary-content__need">It seems you need partial data recovery.</div>
+					<div class="summary-content__cost">
+						Selected repair option
+						<button class="modalOpen">PARTIAL DATA RECOVERY</button>
+						<b>3-5 days</b>
+						<span>expected time</span>
+						<b>$200</b>
+						<span>estimated cost</span>
+					</div>
+				</div>
+				<div class="summary-content__right">
+					<p>We will need to have a closer look at your device to confirm this initial diagnosis.</p>
+					<p>For a faster service, please fill out your details below.</p>
+					<ul>
+						<li><button class="questionnaire-button button-option svg" data-type="book" data-next-page="cf"> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="18.312" viewBox="0 0 25 18.312"> <defs> </defs> <path class="cls-1" d="M1117.42,672.009V655.834h-20.84v16.175h-2.08v2.156h25v-2.156h-2.08Zm-8.34,0h-4.16v-1.078h4.16v1.078Zm6.25-3.235h-16.66V657.991h16.66v10.783Z" transform="translate(-1094.5 -655.844)"></path></svg> Book online </button></li>
+						<li><button class="questionnaire-button button-option svg" data-type="visit" data-next-page="locations"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="22.5" viewBox="0 0 25 22.5"> <defs> </defs> <path class="cls-1" d="M1118.11,583.25h-22.22v2.812h22.22V583.25Zm1.39,14.06V594.5l-1.39-7.03h-22.22l-1.39,7.03v2.812h1.39v8.436h13.89V597.31h5.55v8.436h2.78V597.31h1.39Zm-12.5,5.624h-8.33V597.31H1107v5.624Z" transform="translate(-1094.5 -583.25)"></path> </svg> Visit us</button></li>
+						<li><button class="questionnaire-button button-option svg" data-type="call" data-next-page="locations"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" viewBox="0 0 25 20"> <defs> </defs> <path class="cls-1" d="M1119.2,880.554a17.507,17.507,0,0,0-24.4,0,1.1,1.1,0,0,0,0,1.506l2.59,2.629a1,1,0,0,0,.74.307,1.026,1.026,0,0,0,.72-0.3,11.9,11.9,0,0,1,2.78-1.962,1.062,1.062,0,0,0,.58-0.954V878.5a14.96,14.96,0,0,1,4.79-.774,15.264,15.264,0,0,1,4.79.763v3.287a1.072,1.072,0,0,0,.58.954,12.014,12.014,0,0,1,2.78,1.962,0.982,0.982,0,0,0,.72.3,1,1,0,0,0,.74-0.308l2.59-2.629A1.081,1.081,0,0,0,1119.2,880.554Zm-2.66-11.037-1.47-1.5-3.71,3.764,1.47,1.5S1116.43,869.548,1116.54,869.517Zm-8.5-4.517h-2.08v5.3h2.08V865Zm-6.87,8.281,1.47-1.5-3.7-3.775-1.48,1.506C1097.57,869.548,1101.17,873.281,1101.17,873.281Z" transform="translate(-1094.5 -865)"></path> </svg> Call us</button></li>
+						<li><button class="questionnaire-button button-option svg" data-type="email" data-next-page="cf"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="21.688" viewBox="0 0 25 21.688"> <defs> </defs> <path class="cls-1" d="M1094.51,745.833L1119.5,735l-24.99-10.833-0.01,8.426L1112.35,735l-17.85,2.407Z" transform="translate(-1094.5 -724.156)"></path> </svg> Email us</button></li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
 
 	<ul class="progress">
-		<li class="step1">DEVICE & SERVICE <span></span></li>
+		<li class="step1 active">DEVICE & SERVICE <span></span></li>
 		<li class="step2">DIAGNOSIS <span></span></li>
 		<li class="step3">SUMMARY & OPTIONS <span></span></li>
 	</ul>
