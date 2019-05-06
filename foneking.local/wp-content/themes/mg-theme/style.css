@@ -1,0 +1,97 @@
+/*
+Theme Name: PAL Theme 01
+Author: Purple Adlab
+Author URI: https://purpleadlab.com/
+Description: Private theme, powered by Purple Adlab
+Version: 1.0
+Tags: Purple Adlab
+*/
+.main-footer__top-row .faq-list{
+	padding:15px;
+}
+.main-footer__top-row .faq-item {
+	cursor: pointer;
+    padding: 0;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+.main-footer__top-row .faq-item:first-child{
+	margin-top: 0;
+}
+.main-footer__top-row .faq-quest{
+	position: relative;
+	border-radius: 0;
+}
+.main-footer__top-row .faq-quest:before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 20px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    background: #fff;
+    transition:all .25s ease;
+    transform: translate(0, -50%);
+}
+.main-footer__top-row .faq-quest:after {
+    content: "";
+    display: block;
+    opacity: 1;
+    width: 2px;
+    height: 20px;
+    position: absolute;
+    right: 29px;
+    top: 50%;
+    background: #fff;
+    transition:all .25s ease;
+    transform: translate(0, -50%);
+}
+.main-footer__top-row .open .faq-quest:after {
+	transform: translate(0, -50%) rotate(45deg);
+}
+.main-footer__top-row .open .faq-quest:before {
+	transform: translate(0, -50%) rotate(45deg);
+}
+.main-footer__top-row .faq-answer{
+	display: none;
+}
+
+.product-section__product-item.accented-item:before {
+  content: 'Best Deal';
+  position: absolute;
+  height: 35px;
+  width: 150px;
+  right: -35px;
+  top: 20px;
+  transform: rotate(45deg);
+  background: #da2745;
+  line-height: 35px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.product-section__product-item.most_popular:before {
+  content: 'Most Popular';
+  position: absolute;
+  height: 35px;
+  width: 150px;
+  right: -35px;
+  top: 20px;
+  transform: rotate(45deg);
+  background: green;
+  line-height: 35px;
+  font-weight: 700;
+  font-size: 0.87rem;
+  color: #fff;
+}
+
+.guarantee-section .text {
+    margin: 0;
+}
+
+.feedback {
+  align-content: center;
+  align-items: center;
+}
