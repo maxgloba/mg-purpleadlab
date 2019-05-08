@@ -2,6 +2,7 @@
 	'use strict';
 	$(function() {
 
+		// Beer slider
 		$.fn.BeerSlider = function ( options ) {
 			options = options || {};
 			return this.each(function() {
@@ -10,6 +11,7 @@
 		};
 		$('.beer-slider').BeerSlider({start: 50});
 
+		// FAQ toggle
 		$(document).on('click', '.faq-quest', function(){
 			if ( $(this).parent().hasClass('open') ) {
 				$('.faq-item').removeClass('open').find('.faq-answer').slideUp('fast');
@@ -19,6 +21,7 @@
 			}
 		});
 
+		// Scroll btn
 		$(document).on('click', '.top-section .scroll-btn', function(e){
 			e.preventDefault();
 			$('html, body').animate({
@@ -27,11 +30,15 @@
 			return false;
 		});
 
+		// Modal open
 		$(document).on('click', '.modal-triger', function(e){
 			e.preventDefault();
 			var href = $(this).attr('href');
-			$('body, html').css('overflow', 'hidden');
-			$('html').css('width', 'calc(100% - 17px)');
+			var winWidth = $(window).width();
+			if (winWidth > 1024){
+				$('body, html').css('overflow', 'hidden');
+				$('html').css('width', 'calc(100% - 17px)');
+			}
 			$('body').append('<section id="modal" class="modal"><span id="modal-close">×</span><div class="modal-container"></div></div>');
 			setTimeout(function(){
 				var template = $('template'+href).html();
@@ -41,9 +48,9 @@
 				});
 				$('#modal .modal-container').html(template).css('transform', 'scale(1)');
 			}, 100);
-			console.log('modal open');
 		});
 
+		// Modal Close
 		$(document).on('click', '#modal-close', function(e){
 			e.preventDefault();
 			$('body, html').css('overflow', 'visible');
@@ -56,9 +63,9 @@
 			setTimeout(function(){
 				$('#modal').remove();
 			}, 250);
-			console.log('modal close');
 		});
 
+		// Modal MORE
 		$(document).on('click', '.product-item__more', function(e){
 			e.preventDefault();
 
@@ -95,25 +102,21 @@
 							'opacity': '1',
 						});
 						$('#modal .modal-container').html(html).css('transform', 'scale(1)');
-						// setTimeout(function(){
-						// 	$('ul.tabs li:first-child').addClass('active');
-						// 	$('ul.tabs + div').addClass('active');
-						// }, 100);
 					}, 100);
 				}
 			});
-			console.log('product modal');
 		});
 
+		// FAQ open
 		$(document).on('click', '.faq-triger', function(e){
 			e.preventDefault();
 			$('.faq_full').toggleClass('opened');
 			$('html, body').animate({
 				scrollTop: $('.main-footer').offset().top
 			}, 600);
-			console.log('faq');
 		});
 
+		// Tab click
 		$(document).on('click', 'ul.tabs li', function(e){
 			e.preventDefault();
 
@@ -131,65 +134,52 @@
 
 		});
 
+		// Offer display
 		$(document).on('click', '.customBoxDisplay', function(e){
 			e.preventDefault();
 			var templateId = $(this).data('template');
 			var templateData = $('#'+templateId).html();
-			$('#one-page-shopping-checkout').hide();
-			$('#one-page-shopping-cart').hide();
-			$('#offer').html(templateData).css('max-height', '2000px');
+
+			$('#offer').html(templateData);
+			$('#offer').slideDown();
+
 			setTimeout(function(){
 				$('html, body').animate({
 					scrollTop: $('#offer').offset().top
-				}, 600);
+				}, 800);
 			}, 100);
 		});
 
-		// $(document).on('click', '.closeOffer', function(e){
-		// 	e.preventDefault();
-		// 	$('#offer').css('max-height', '0px');
-		// 	setTimeout(function(){
-		// 		$('#one-page-shopping-cart').css('max-height', '2000px');
-		// 		$('html, body').animate({
-		// 			scrollTop: $('#one-page-shopping-cart').offset().top
-		// 		}, 600);
-		// 	}, 800);
-		// });
+		$(document).on('click', '#offer_place_order', function(e){
+			e.preventDefault();
 
-		// $(document).on('click', '.add_to_cart_button', function(e){
-		// 	e.preventDefault();
-		// 	$('#offer').css('max-height', '0px');
-		// 	$('#one-page-shopping-cart').css('max-height', '2000px');
-		// 	$('html, body').animate({
-		// 		scrollTop: $('#one-page-shopping-cart').offset().top
-		// 	}, 600);
-		// 	// return false;
-		// });
+			$('#uppSelloffer').css({
+				'visibility': 'visible',
+				'opacity': '1',
+			});
+			$('#uppSelloffer .modal-container').css('transform', 'scale(1)');
 
-		// $(document).on('click', '#openCheckout', function(e){
-		// 	e.preventDefault();
-		// 	$('#one-page-shopping-cart').css('max-height', '0px');
-		// 	setTimeout(function(){
-		// 		$('#one-page-shopping-checkout').css('max-height', '2000px');
-		// 		$('html, body').animate({
-		// 			scrollTop: $('#one-page-shopping-checkout').offset().top
-		// 		}, 600);
-		// 	}, 800);
-		// });
-		// $(document).on('click', '#openCart', function(e){
-		// 	e.preventDefault();
-		// 	$('#one-page-shopping-checkout').css('max-height', '0px');
-		// 	setTimeout(function(){
-		// 		$('#one-page-shopping-cart').css('max-height', '2000px');
-		// 		$('html, body').animate({
-		// 			scrollTop: $('#one-page-shopping-cart').offset().top
-		// 		}, 600);
-		// 	}, 800);
-		// });
+		});
 
-		// #one-page-shopping-cart
-		// #one-page-shopping-checkout
+		// Modal Close
+		$(document).on('click', '.modal-close__uppSelloffer, #place_order', function(){
+			$('body, html').css('overflow', 'visible');
+			$('html').css('width', '100%');
+			$('#uppSelloffer .modal-container').css('transform', 'scale(0)');
+			$('#uppSelloffer').css({
+				'visibility': 'hidden',
+				'opacity': '0',
+			});
+		});
 
+		$(document).on('click', '.addProduct', function(e){
+			e.preventDefault();
+			console.log('product added to cart');
+			$("[name='update_cart']").trigger("click");
+			// setTimeout(function(){
+			// 	$('#place_order').click();
+			// }, 1500);
+		});
 
 
 	});

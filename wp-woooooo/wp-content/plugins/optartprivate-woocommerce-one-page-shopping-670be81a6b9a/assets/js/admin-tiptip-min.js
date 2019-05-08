@@ -1,1 +1,0 @@
-(function($){$(document).ready(function(){$(".help_tip").tipTip({defaultPosition:"left"})})})(jQuery);

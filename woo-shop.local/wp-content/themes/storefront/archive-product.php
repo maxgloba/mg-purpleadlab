@@ -179,9 +179,8 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	do_action( 'woocommerce_no_products_found' );
 }
 ?>
-
-
 	</div>
 </section>
+
 <?php
 	get_footer( 'shop' );

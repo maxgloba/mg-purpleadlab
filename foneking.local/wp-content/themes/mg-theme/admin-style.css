@@ -1,9 +1,0 @@
-body .acf-field-object-tab, body .acf-field-object-accordion, body .acf-field.acf-accordion .acf-accordion-title {
-	background: #aaccff29;
-}
-body .acf-postbox.seamless>.acf-fields>.acf-field.acf-accordion{
-	border-color: #0085ba;
-}
-body .acf-postbox.seamless>.acf-fields>.acf-field.acf-accordion+.acf-field.acf-accordion{
-	margin-top: 10px;
-}

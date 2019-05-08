@@ -48,7 +48,17 @@ if ( ! is_ajax() ) {
 
 		<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
 
-		<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html( $order_button_text ) . '</button>' ); // @codingStandardsIgnoreLine ?>
+		<?php echo apply_filters( 'woocommerce_order_button_html', '<a class="button alt" id="offer_place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html( $order_button_text ) . '</a>' ); ?>
+		<?php echo '<div id="uppSelloffer" class="uppSelloffer-modal"><div class="modal-container">
+			<h1>Insurance policy!!!</h1>';
+		echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html( $order_button_text ) . '</button>' );
+
+		echo '
+			<div class="uppsell-row">
+				<span class="addProduct" data-product_id="207">Yes I want it!</span>
+				<span class="modal-close__uppSelloffer">No thanks</span>
+			</div>
+		</div></div>'; ?>
 
 		<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
 

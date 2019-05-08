@@ -12,6 +12,8 @@
     color: #fff;
     transition: background 0.35s;
     width: 100%;
+    position: relative;
+    z-index: 2;
 }
 .product-section__product-list a.button:hover, .modal a.button:hover{
     opacity: .8;
@@ -197,7 +199,26 @@ form.woocommerce-cart-form table.cart{
 	display: none !important;
 }
 */
-
+.mg-shop-block{
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+span.remove_product {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    background: #e2401c;
+    display: block;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 18px;
+}
+span.remove_product:hover{
+    opacity: .8;
+}
 
 
 ul.tabs{
@@ -281,7 +302,7 @@ textarea{
     font-size: 18px;
 }
 
-#modal{
+#modal, .uppSelloffer-modal{
     position: fixed;
     top: 0;
     right: 0;
@@ -301,7 +322,8 @@ textarea{
     padding-top: 8vh;
     overflow-y: auto;
 }
-#modal .modal-container{
+#modal .modal-container,
+.uppSelloffer-modal .modal-container{
     padding: 3rem !important;
     position: relative;
     flex-shrink: 0;
@@ -404,8 +426,54 @@ ul.subscribe-btns.products button.accent-btn:hover{
 
 .modal .description h2{
     display: none;
-
 }
+
+
+
+.cart_block, .checkout_block{
+    max-height: 0px;
+    overflow: hidden;
+    transition:all 1s ease;
+}
+.cart_block h3, .checkout_block h3{
+    font-weight: 700;
+}
+.cart_block{
+    padding-top: 30px;
+}
+.cart_block .cart{
+    margin: 0;
+}
+
+
+#blockLoader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background: rgba(255,255,255, .8) url('../img/loading.gif') no-repeat center center/151px;
+}
+
+
+@-webkit-keyframes rotating{
+  from {
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+  to {
+    transform: rotate(360deg) translate(-50%, -50%);
+  }
+}
+@keyframes rotating{
+  from {
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+  to {
+    transform: rotate(360deg) translate(-50%, -50%);
+  }
+}
+
 
 @media(min-width:768px){
     .wi-container .wc-proceed-to-checkout {
@@ -457,4 +525,46 @@ ul.subscribe-btns.products button.accent-btn:hover{
         height: 50px;
         top: 0;
     }
+}
+
+
+#uppSelloffer button#place_order{
+    max-height: 0px !important;
+    overflow: hidden !important;
+    visibility: hidden;
+    opacity: 0 !important;
+    padding: 0;
+    display: none;
+}
+.uppsell-row span.addProduct{
+    background: #5f378f;
+    text-decoration: none;
+    display: block;
+    border-radius: 4px;
+    padding: 10px 10px;
+    text-align: center;
+    margin: 12px auto;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 1.93rem;
+    color: #fff;
+    transition: background 0.35s;
+    width: 300px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+.uppsell-row span.addProduct:hover{
+    opacity: .8;
+}
+.uppsell-row span.modal-close__uppSelloffer {
+    background: #f4f4f4;
+    padding: 10px 30px;
+    margin: 0 auto;
+    display: block;
+    width: 200px;
+    cursor: pointer;
+}
+.uppsell-row span.modal-close__uppSelloffer:hover {
+    opacity: .8;
 }

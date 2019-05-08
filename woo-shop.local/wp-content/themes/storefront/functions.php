@@ -139,3 +139,22 @@ add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_custom_single_ad
 function woo_custom_single_add_to_cart_text() {
 	return __( 'ORDER NOW', 'woocommerce' );
 }
+
+
+
+function removeProduct(){
+
+	global $woocommerce;
+
+	$cart_item_key = $_POST['cart_item_key'];
+
+	if( WC()->cart->remove_cart_item( $cart_item_key ) ){
+		echo 'Product was removed';
+	} else{
+		echo 'Error!!!';
+	}
+
+	die();
+}
+add_action('wp_ajax_removeProduct', 'removeProduct');
+add_action('wp_ajax_nopriv_removeProduct', 'removeProduct');

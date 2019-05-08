@@ -1,18 +1,37 @@
 $(function(){
 
 	var phone_Model, phone_Problem, phone_Diagnosis;
-	console.log(phone_Model);
 
-	$(window).on('load resize', function(){
-		var winWidth = $(window).width();
+	// $(window).on('load resize', function(){
+	// 	var winWidth = $(window).width();
+	// 	console.log(winWidth);
+	// });
+	window.addEventListener('load', function(){
+		var winWidth = window.innerWidth;
 		console.log(winWidth);
 	});
 
-	$(document).on('mouseover', '.phone-list .option li', function(e){
-		e.preventDefault();
-		$('.phone-list .option li').removeClass('active');
-		$(this).addClass('active');
-	});
+	// $(document).on('mouseover', '.phone-list .option li', function(e){
+	// 	e.preventDefault();
+	// 	$('.phone-list .option li').removeClass('active');
+	// 	$(this).addClass('active');
+	// });
+
+	var listBtns = document.querySelectorAll('.option li');
+	for (var i = 0; i < listBtns.length; i++) {
+		var btnsClass = listBtns[i].classList;
+		btnsClass.remove('active');
+		listBtns[i].addEventListener('mouseleave', function(e){
+			e.target.classList.remove('active');
+		});
+		listBtns[i].addEventListener('mouseover', function(e){
+			e.target.classList.add('active');
+		});
+		listBtns[i].addEventListener('click', function(e){
+			console.log( e.target.textContent );
+		});
+	}
+
 
 	var phoneListHeight = $('#phone-list').height();
 	$('.phone-list').on('scroll', function(e){
@@ -43,7 +62,7 @@ $(function(){
 		e.preventDefault();
 		phone_Model = $(this).html();
 		$('.select-phone').html(phone_Model);
-		console.log(phone_Model);
+		$('[name="phone_Model"]').val(phone_Model);
 		closeModal();
 	});
 
@@ -51,7 +70,7 @@ $(function(){
 		e.preventDefault();
 		phone_Problem = $(this).html();
 		$('.select-problem').html(phone_Problem);
-		console.log(phone_Problem);
+		$('[name="phone_Problem"]').val(phone_Problem);
 		closeModal();
 	});
 
@@ -118,7 +137,7 @@ $(function(){
 		setTimeout(function(){
 			$('#step3Box').addClass('active');
 		}, 150);
-		console.log(phone_Diagnosis);
+		$('[name="phone_Diagnosis"]').val(phone_Diagnosis);
 	});
 
 	$(document).on('click', '.backToStep2', function(e){
@@ -128,7 +147,6 @@ $(function(){
 		setTimeout(function(){
 			$('#step2Box').removeClass('active-hide');
 		}, 150);
-		console.log(phone_Diagnosis);
 	});
 
 	$(document).on('click', '.goToStep4', function(e){
@@ -153,6 +171,30 @@ $(function(){
 		setTimeout(function(){
 			$('#step3Box').removeClass('active-hide');
 		}, 150);
+	});
+
+	$(document).on('submit', '#contactForm', function(e){
+		e.preventDefault();
+		var captchaLabel = $(this).find('[for="captcha"]').html();
+		var captchaInput = $(this).find('[name="captcha"]').val();
+		if (captchaLabel == captchaInput) {
+			$.ajax({
+				url: './send.php',
+				type: 'post',
+				data: $(this).serialize()
+			}).done(function(data){
+				alert(data); location.reload();
+			});
+		} else {
+			alert('Try againe and check captcha!');
+		}
+	});
+
+	$(document).on('click', '.box .button-link_modal', function(e){
+		e.preventDefault();
+		var link = $(this).attr('href');
+		$('.modal-map iframe').prop('src', link+'&zoom=9');
+		openModal('map');
 	});
 
 });

@@ -15,11 +15,24 @@
 ( function( $ ){
     $( document ).ready( function(){
 
+    function checkoutLoad(){
+        $.ajax({
+            type: 'POST',
+            url: checkoutUrl,
+            dataType: "html",
+            success: function (response) {
+                $('.checkoutPage').html(response);
+                $('.checkoutPage').slideDown('slow');
+            }
+        });
+    }
+
     function set_cookie(cname, cvalue, exdays) {
         var d = new Date();
         d.setTime(d.getTime() + (exdays*24*60*60*1000));
         var expires = "expires="+ d.toUTCString();
         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        console.log( document.cookie );
     }
 
     function get_cookie(cname) {
@@ -63,9 +76,9 @@
 
     			var scroll_to = scroll_cookie;
     			if ( scroll_cookie) {
-    				$.scrollTo( scroll_cookie, {
-    					duration: 'slow'
-    				});
+    				$('html, body').animate({
+                        scrollTop: $('#one-page-shopping-cart').offset().top
+                    }, 800);
     			}
 
                 delete_cookie('ops_scroll_cookie');
@@ -109,6 +122,8 @@
          */
         function ajax_request( $element, ajax_data, update_cart, scroll_to, update_checkout )
         {
+
+
             $.ajax({
                 type: 'post',
 				url: ops_php_data.ajax_url,
@@ -135,7 +150,7 @@
                     }
                     if ( ops_php_data.display_cart ){
                         $( '#one-page-shopping-cart' ).show();
-                        $('#offer').css('max-height', '0px');
+                        $('#offer').slideUp();
                     }else{
 						$( '#one-page-shopping-cart' ).hide();
 					}
@@ -144,21 +159,23 @@
                     if ( update_checkout === true ) {
 
                         $( '#one-page-shopping-checkout' ).show();
-                        $('#offer').css('max-height', '0px');
+                        $('#offer').slideUp();
 
-                        $( document.body ).trigger('update_checkout');
-                        $(document.body).trigger('country_to_state_changed');
+                        checkoutLoad();
 
-                        if( scroll_to !== false && scroll_to.length && !ops_php_data.force_refresh){
+                        // $( document.body ).trigger('update_checkout');
+                        // $(document.body).trigger('country_to_state_changed');
 
-                            // $( 'body' ).scrollTo( scroll_to, {
-                            //      duration: 'slow'
-                            // });
-                            $('html, body').animate({
-                                scrollTop: $(scroll_to).offset().top
-                            }, 600);
+                        // if( scroll_to !== false && scroll_to.length && !ops_php_data.force_refresh){
 
-                        }
+                        //     // $( 'body' ).scrollTo( scroll_to, {
+                        //     //      duration: 'slow'
+                        //     // });
+                        //     $('html, body').animate({
+                        //         scrollTop: $(scroll_to).offset().top
+                        //     }, 600);
+
+                        // }
 
                     }
 
@@ -185,9 +202,9 @@
                     // ops_php_data.force_refresh
                     if ( $( '#one-page-shopping-cart-content table' ).length === 0 && update_cart && !ops_php_data.force_refresh) {
                         $( '#one-page-shopping-checkout, #one-page-shopping-cart' ).hide();
-                        $( 'body' ).scrollTo( '#page', {
-                            duration: 'slow'
-                        });
+                        $('html, body').animate({
+                            scrollTop: $('#product-section').offset().top
+                        }, 800);
                     }
 
 					//check if user want to update sidebar
@@ -306,7 +323,6 @@
          * Click on "Add to Cart" button, displayed on product list
          */
         $( document ).on( 'click', '.product_type_simple', function( event ) {
-            console.log('product_type_simple');
 
             var $this = $(this);
 
@@ -321,7 +337,7 @@
 
             $('html, body').animate({
                 scrollTop: $('#one-page-shopping-cart').offset().top
-            }, 600);
+            }, 800);
 
             if(ops_php_data.scroll_enabled) ajax_request( $(event.target), ajax_data, ops_php_data.display_cart, false, true );
             else ajax_request( $(event.target), ajax_data, ops_php_data.display_cart, false, true );
@@ -344,6 +360,7 @@
 
             if(ops_php_data.scroll_enabled)ajax_request( $(event.target), ajax_data, ops_php_data.display_cart, scroll_to, true );
             else ajax_request( $(event.target), ajax_data, ops_php_data.display_cart, false, true );
+
             return false;
         } );
 
@@ -371,28 +388,6 @@
             }
         });
 
-        /**
-         * Click on remove product from cart icon, on product page
-         */
-        $( '#one-page-shopping-cart-content' ).on( 'click', '.product-remove > a', function(event) {
-
-            var parts = this.search.split( 'remove_item=' );
-            if ( parts[1] !== undefined ) {
-
-                parts = parts[1].split( '&' );
-                if ( parts[0] !== undefined ) {
-
-                    var ajax_data = {
-                        action: 'ops_remove_from_cart',
-                        cart_item: parts[0]
-                    };
-                    ajax_data[ops_php_data.nonce_post_id] = ops_php_data.nonce;
-
-                    ajax_request( $(event.target).closest('form'), ajax_data, true, false, true );
-                    return false;
-                }
-            }
-        });
 
         /**
          * Click on "Update Cart" button
@@ -429,7 +424,7 @@
         if( ops_php_data.scroll_enabled ) {
         	if ( ops_php_data.display_cart && ( $( '#one-page-shopping-cart-content table' ).length !== 0 || ops_php_data.cart_count > 0 ) ) {
         		$( '#one-page-shopping-cart' ).show();
-                $('#offer').css('max-height', '0px');
+                $('#offer').slideUp();
         	}else{
         		$( '#one-page-shopping-cart' ).hide();
         	}

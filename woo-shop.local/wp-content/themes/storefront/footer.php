@@ -8,7 +8,7 @@
  */
 
 ?>
-
+				<?php if ( is_front_page() ) : ?>
 				<section class="guarantee-section">
 					<div class="container">
 						<?php $payment_method = get_field('payment_method', 5); if( $payment_method ): ?>
@@ -21,6 +21,7 @@
 						<div class="text bold"><?php the_field('gs_note', 5); ?></div>
 					</div>
 				</section>
+			<?php endif; ?>
 
 			</main>
 			<footer class="main-footer">
@@ -57,6 +58,7 @@
 				</div>
 			</footer>
 
+		<?php if ( is_front_page() ) : ?>
 			<?php if( have_rows('footer_menu', 5) ): $i=0; ?>
 				<?php while ( have_rows('footer_menu', 5) ) : the_row(); $i++; ?>
 					<template id="template_<?php echo $i; ?>">
@@ -66,12 +68,15 @@
 					</template>
 				<?php endwhile; ?>
 			<?php endif; ?>
+		<?php endif; ?>
 
 		</div><!-- #END wrapper -->
 
 		<?php wp_footer(); ?>
-		<script src="<?php echo get_template_directory_uri(); ?>/js/BeerSlider.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
-		<script src="<?php echo get_template_directory_uri(); ?>/scripts.js"></script>
+
+		<?php if ( is_front_page() ) : ?>
+			<script src="<?php echo get_template_directory_uri(); ?>/js/BeerSlider.js"></script>
+			<script src="<?php echo get_template_directory_uri(); ?>/scripts.js"></script>
+		<?php endif; ?>
 	</body>
 </html>

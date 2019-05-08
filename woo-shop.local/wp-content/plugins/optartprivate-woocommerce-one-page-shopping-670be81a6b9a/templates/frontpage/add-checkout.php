@@ -4,29 +4,28 @@
  * @param string $plugin_identifier
  */
 
-
-// Add a flag to mark this is OPS checkout
-add_action('woocommerce_checkout_after_customer_details', function(){
-    echo '<input type="hidden" name="ops_checkout" value="true">';
-});
 ?>
 
 <script type="text/javascript">
-    /* global ops_php_data */
-    ops_php_data['display_checkout'] = true;
+	(function( $ ) {
+		'use strict';
+		$(function() {
+			function checkoutLoad(){
+				$.ajax({
+					type: 'POST',
+					url: checkoutUrl,
+					dataType: "html",
+					success: function (response) {
+						$('.checkoutPage').html(response);
+						$('.checkoutPage').slideDown('slow');
+					}
+				});
+			}checkoutLoad();
+		});
+	})( jQuery );
 </script>
 <section class="one-page-shopping-section" id="one-page-shopping-checkout" >
-<!--     <div class="row">
-    	<div class="col-sm-6">
-    		<h1 class="one-page-shopping-header" id="one-page-shopping-checkout-header">
-    		    <?php _e( 'Checkout', 'woocommerce' ); ?>
-    		</h1>
-    	</div>
-    	<div class="col-sm-6">
-    		<button class="one-page-btn" id="openCart">Back to cart</button>
-    	</div>
-    </div> -->
-    <div id="one-page-shopping-checkout-content">
-        <?php require('checkout.php'); ?>
-    </div>
+	<div id="one-page-shopping-checkout-content">
+		<div class="checkoutPage" style="display:none;"></div>
+	</div>
 </section>

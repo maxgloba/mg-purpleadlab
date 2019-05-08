@@ -14,15 +14,9 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 
 		<!-- Custom head settings -->
-		<meta name="theme-color" content="#c9e0e04d">
+		<meta name="theme-color" content="#5f378f">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
-		<?php
-			// if( !is_front_page() ){
-			// 	echo '<script>document.location.href="'. home_url() .'"; </script>';
-			// }
-		?>
 
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png" type="image/png">
@@ -30,6 +24,15 @@
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/styles/custom-styles.css">
 
 		<?php wp_head(); ?>
+
+		<?php if ( is_front_page() ) : ?>
+			<script>
+				var ajaxUrl = '<?php echo home_url(); ?>/wp-admin/admin-ajax.php';
+				var cartUrl = '<?php echo get_permalink(6); ?>';
+				var checkoutUrl = '<?php echo get_permalink(7); ?>';
+			</script>
+		<?php endif; ?>
+
 	</head>
 
 	<body <?php body_class(); ?>>

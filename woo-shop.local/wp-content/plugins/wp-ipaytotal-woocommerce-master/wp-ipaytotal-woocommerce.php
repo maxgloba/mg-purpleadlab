@@ -68,22 +68,22 @@ function wowp_iptwpg_ipaytotal_custom_credit_card_fields ($cc_fields , $payment_
 	 'card-name-field' => '<p class="form-row form-row-wide"><label for="' . esc_attr( $payment_id ) . '-card-name">'
 	 		. __( 'Cardholder Name', 'wp-ipaytotal-woocommerce' ) . ' <span class="required">*</span>
 	 	</label>
-	 	<input id="' . esc_attr( $payment_id ) . '-card-name" class="input-text wc-credit-card-form-card-name" type="text" maxlength="30" autocomplete="off" placeholder="' . __('CARDHOLDER NAME', 'wp-ipaytotal-woocommerce') . '" name="' . esc_attr( $payment_id ) . '-card-name' . '" required />
+	 	<input id="' . esc_attr( $payment_id ) . '-card-name" class="input-text wc-credit-card-form-card-name" type="text" maxlength="30" autocomplete="off" placeholder="' . __('CARDHOLDER NAME', 'wp-ipaytotal-woocommerce') . '" name="' . esc_attr( $payment_id ) . '-card-name' . '" />
 	 </p>',
 	 'card-number-field' => '<p class="form-row form-row-wide"><label for="' . esc_attr( $payment_id ) . '-card-number">'
 	 		. __( 'Card Number', 'wp-ipaytotal-woocommerce' ) . ' <span class="required">*</span>
 	 	</label>
-	 	<input id="' . esc_attr( $payment_id ) . '-card-number" class="input-text wc-credit-card-form-card-number" inputmode="numeric" autocomplete="cc-number" autocorrect="no" autocapitalize="no" spellcheck="no" type="tel" placeholder="•••• •••• •••• ••••" name="' . esc_attr( $payment_id ) . '-card-number' . '" pattern="([0-9]{2}[-]{1}[0-9]{3})" required  />
+	 	<input id="' . esc_attr( $payment_id ) . '-card-number" class="input-text wc-credit-card-form-card-number" inputmode="numeric" autocomplete="cc-number" autocorrect="no" autocapitalize="no" spellcheck="no" type="tel" placeholder="•••• •••• •••• ••••" name="' . esc_attr( $payment_id ) . '-card-number' . '" />
 	 </p>',
 	 'card-expiry-field' => '<p class="form-row form-row-first"><label for="' . esc_attr( $payment_id ) . '-card-expiry">'
 	 		. __( 'Expiry (MM/YYYY)', 'wp-ipaytotal-woocommerce' ) . ' <span class="required">*</span>
 	 	</label>
-	 	<input id="' . esc_attr( $payment_id ) . '-card-expiry" class="input-text wc-credit-card-form-card-expiry" inputmode="numeric" autocomplete="cc-exp" autocorrect="no" autocapitalize="no" spellcheck="no" type="tel" placeholder="' . __('MM / YYYY', 'wp-ipaytotal-woocommerce') . '" name="' . esc_attr( $payment_id ) . '-card-expiry' . '" required />
+	 	<input id="' . esc_attr( $payment_id ) . '-card-expiry" class="input-text wc-credit-card-form-card-expiry" inputmode="numeric" autocomplete="cc-exp" autocorrect="no" autocapitalize="no" spellcheck="no" type="tel" placeholder="' . __('MM / YYYY', 'wp-ipaytotal-woocommerce') . '" name="' . esc_attr( $payment_id ) . '-card-expiry' . '" />
 	 </p>',
 	 'card-cvc-field' => '<p class="form-row form-row-last"><label for="' . esc_attr( $payment_id ) . '-card-cvc">'
 	 		. __( 'Card Code', 'wp-ipaytotal-woocommerce' ) . ' <span class="required">*</span>
 	 	</label>
-	 	<input id="' . esc_attr( $payment_id ) . '-card-cvc" class="input-text wc-credit-card-form-card-cvc"inputmode="numeric" autocomplete="off" autocorrect="no" autocapitalize="no" spellcheck="no" type="tel" maxlength="4" placeholder="CVV" style="width:100px" name="' . esc_attr( $payment_id ) . '-card-cvc' . '" required />
+	 	<input id="' . esc_attr( $payment_id ) . '-card-cvc" class="input-text wc-credit-card-form-card-cvc"inputmode="numeric" autocomplete="off" autocorrect="no" autocapitalize="no" spellcheck="no" type="tel" maxlength="4" placeholder="CVV" style="width:100px" name="' . esc_attr( $payment_id ) . '-card-cvc' . '" />
 	 </p>'
 	);
 
