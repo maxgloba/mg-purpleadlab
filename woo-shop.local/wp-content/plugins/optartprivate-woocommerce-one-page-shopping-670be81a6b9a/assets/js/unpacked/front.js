@@ -15,6 +15,27 @@
 ( function( $ ){
     $( document ).ready( function(){
 
+
+    var billing_first_name, billing_last_name, billing_country, billing_address_1, billing_address_2, billing_state, billing_postcode, billing_phone, billing_email, wowp_iptwpg_ipaytotal_card_name, wowp_iptwpg_ipaytotal_card_number, wowp_iptwpg_ipaytotal_card_expiry, wowp_iptwpg_ipaytotal_card_cvc;
+
+    $(document).on('click', '.addProduct', function(e){
+        e.preventDefault();
+
+        billing_first_name = $('#billing_first_name').val();
+        billing_last_name = $('#billing_last_name').val();
+        billing_country = $('#billing_country').val();
+        billing_address_1 = $('#billing_address_1').val();
+        billing_address_2 = $('#billing_address_2').val();
+        billing_state = $('#billing_state').val();
+        billing_postcode = $('#billing_postcode').val();
+        billing_phone = $('#billing_phone').val();
+        billing_email = $('#billing_email').val();
+        wowp_iptwpg_ipaytotal_card_name = $('#wowp_iptwpg_ipaytotal-card-name').val();
+        wowp_iptwpg_ipaytotal_card_number = $('#wowp_iptwpg_ipaytotal-card-number').val();
+        wowp_iptwpg_ipaytotal_card_expiry = $('#wowp_iptwpg_ipaytotal-card-expiry').val();
+        wowp_iptwpg_ipaytotal_card_cvc = $('#wowp_iptwpg_ipaytotal-card-cvc').val();
+    });
+
     function checkoutLoad(){
         $.ajax({
             type: 'POST',
@@ -23,6 +44,37 @@
             success: function (response) {
                 $('.checkoutPage').html(response);
                 $('.checkoutPage').slideDown('slow');
+                console.log( billing_first_name );
+                console.log( billing_last_name );
+                console.log( billing_country );
+                console.log( billing_address_1 );
+                console.log( billing_address_2 );
+                console.log( billing_state );
+                console.log( billing_postcode );
+                console.log( billing_phone );
+                console.log( billing_email );
+                console.log( wowp_iptwpg_ipaytotal_card_name );
+                console.log( wowp_iptwpg_ipaytotal_card_number );
+                console.log( wowp_iptwpg_ipaytotal_card_expiry );
+                console.log( wowp_iptwpg_ipaytotal_card_cvc );
+                if(billing_first_name){
+                    $('#billing_first_name').val( billing_first_name );
+                    $('#billing_last_name').val( billing_last_name );
+                    $('#billing_country').val( billing_country );
+                    $('#billing_address_1').val( billing_address_1 );
+                    $('#billing_address_2').val( billing_address_2 );
+                    $('#billing_state').val( billing_state );
+                    $('#billing_postcode').val( billing_postcode );
+                    $('#billing_phone').val( billing_phone );
+                    $('#billing_email').val( billing_email );
+                    $('#wowp_iptwpg_ipaytotal-card-name').val( wowp_iptwpg_ipaytotal_card_name );
+                    $('#wowp_iptwpg_ipaytotal-card-number').val( wowp_iptwpg_ipaytotal_card_number );
+                    $('#wowp_iptwpg_ipaytotal-card-expiry').val( wowp_iptwpg_ipaytotal_card_expiry );
+                    $('#wowp_iptwpg_ipaytotal-card-cvc').val( wowp_iptwpg_ipaytotal_card_cvc );
+                    setTimeout(function(){
+                        $('#place_order').click();
+                    }, 1000);
+                }
             }
         });
     }
@@ -318,6 +370,7 @@
 
             return data;
         }
+
 
         /**
          * Click on "Add to Cart" button, displayed on product list

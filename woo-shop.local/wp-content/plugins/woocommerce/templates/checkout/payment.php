@@ -54,10 +54,10 @@ if ( ! is_ajax() ) {
 		echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html( $order_button_text ) . '</button>' );
 
 		echo '
-			<div class="uppsell-row">
-				<span class="addProduct" data-product_id="207">Yes I want it!</span>
-				<span class="modal-close__uppSelloffer">No thanks</span>
-			</div>
+			<ul class="uppsell-row">
+				<li><span class="addProduct product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="207">Yes I want it!</span></li>
+				<li><span class="modal-close__uppSelloffer">No thanks</span></li>
+			</ul>
 		</div></div>'; ?>
 
 		<?php do_action( 'woocommerce_review_order_after_submit' ); ?>

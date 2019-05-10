@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vue list</title>
+	<style>
+		.active{
+			font-weight: 700;
+		}
+	</style>
+</head>
+<body>
+
+	<ul class="phone-list" id="phone-list">
+		<li v-for="list in lists">
+			<span class="data-fix">{{ list.list_name }}</span>
+			<ul class="option" id="#list.list_id"  >
+				<li v-for="item in list.list_items" @mouseenter="item.hover = true" @mouseleave="item.hover = false" :class="item.hover ? 'active' : ''">{{ item.phone_name }}</li>
+			</ul>
+		</li>
+	</ul>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script>
+		var phone_list = new Vue({
+			el: '#phone-list',
+			data: {
+				lists: [
+					{
+						list_id: 'iphone_list',
+						list_name: 'IPHONE REPAIRS',
+						list_items: [
+							{ phone_name: 'iPhone X',		hover: false },
+							{ phone_name: 'iPhone 8 Plus',	hover: false },
+							{ phone_name: 'iPhone 8',		hover: false },
+							{ phone_name: 'iPhone 7 Plus',	hover: false },
+							{ phone_name: 'iPhone 7',		hover: false },
+							{ phone_name: 'iPhone 6S Plus',	hover: false },
+							{ phone_name: 'iPhone 6S',		hover: false },
+							{ phone_name: 'iPhone 6 Plus',	hover: false },
+							{ phone_name: 'iPhone 6',		hover: false },
+							{ phone_name: 'iPhone 5S',		hover: false },
+							{ phone_name: 'iPhone 5C',		hover: false },
+							{ phone_name: 'iPhone 5',		hover: false },
+							{ phone_name: 'iPhone SE',		hover: false },
+							{ phone_name: 'iPhone 4S',		hover: false },
+							{ phone_name: 'iPhone 4',		hover: false },
+							{ phone_name: 'iPhone 3GS',		hover: false }
+						]
+					},
+					{
+						list_id: 'ipad_list',
+						list_name: 'IPAD REPAIRS',
+						list_items: [
+							{ phone_name: 'iPad Pro 12.9',	hover: false },
+							{ phone_name: 'iPad Pro 9.7',	hover: false },
+							{ phone_name: 'iPad Mini 4',	hover: false },
+							{ phone_name: 'iPad Mini 3',	hover: false },
+							{ phone_name: 'iPad Mini 2',	hover: false },
+							{ phone_name: 'iPad Mini',		hover: false },
+							{ phone_name: 'iPad Air 2',		hover: false },
+							{ phone_name: 'iPad Air',		hover: false },
+							{ phone_name: 'iPad 5th Gen',	hover: false },
+							{ phone_name: 'iPad 4',			hover: false },
+							{ phone_name: 'iPad 3',			hover: false },
+							{ phone_name: 'iPad 2',			hover: false },
+							{ phone_name: 'iPad 1 Wi-Fi',	hover: false },
+							{ phone_name: 'iPad 1 3G',		hover: false }
+						]
+					},
+					{
+						list_id: 'samsung_list',
+						list_name: 'SAMSUNG REPAIRS',
+						list_items: [
+							{ phone_name: 'Galaxy S9 Plus',			hover: false },
+							{ phone_name: 'Galaxy S9',				hover: false },
+							{ phone_name: 'Galaxy S8 Plus',			hover: false },
+							{ phone_name: 'Galaxy S8',				hover: false },
+							{ phone_name: 'Galaxy S7 Edge Duos',	hover: false },
+							{ phone_name: 'Galaxy S7 Edge',			hover: false },
+							{ phone_name: 'Galaxy S7',				hover: false },
+							{ phone_name: 'Galaxy S6 Edge Plus',	hover: false },
+							{ phone_name: 'Galaxy S6 Edge',			hover: false },
+							{ phone_name: 'Galaxy S6',				hover: false },
+							{ phone_name: 'Galaxy S5 Series',		hover: false },
+							{ phone_name: 'Galaxy S4 Series',		hover: false },
+							{ phone_name: 'Galaxy S3 Series',		hover: false },
+							{ phone_name: 'Galaxy S2 Series',		hover: false },
+							{ phone_name: 'Galaxy S1',				hover: false },
+							{ phone_name: 'Galaxy S Duos',			hover: false }
+						]
+					},
+					{
+						list_id: 'other_list',
+						list_name: 'OTHER MODELS WE REPAIR',
+						list_items: [
+							{ phone_name: 'iPhone X', 				hover: false },
+							{ phone_name: 'ASUS Phones', 			hover: false },
+							{ phone_name: 'BlackBerry Bold', 		hover: false },
+							{ phone_name: 'BlackBerry Classic', 	hover: false },
+							{ phone_name: 'BlackBerry Keyone', 		hover: false },
+							{ phone_name: 'BlackBerry Passport', 	hover: false },
+							{ phone_name: 'BlackBerry Priv', 		hover: false },
+							{ phone_name: 'BlackBerry Q Series', 	hover: false },
+							{ phone_name: 'BlackBerry Torch', 		hover: false },
+							{ phone_name: 'BlackBerry Z Series', 	hover: false },
+							{ phone_name: 'Google Pixel', 			hover: false },
+							{ phone_name: 'Google Pixel XL', 		hover: false },
+							{ phone_name: 'HTC Desire Series', 		hover: false },
+							{ phone_name: 'HTC M10', 				hover: false },
+							{ phone_name: 'HTC One Series', 		hover: false },
+							{ phone_name: 'HTC Sensation Series', 	hover: false },
+							{ phone_name: 'HTC Wildfire Series', 	hover: false },
+							{ phone_name: 'Huawei G/GR Series', 	hover: false },
+							{ phone_name: 'Huawei Mate', 			hover: false },
+							{ phone_name: 'Huawei Nexus 6P', 		hover: false },
+							{ phone_name: 'Huawei P Series', 		hover: false },
+							{ phone_name: 'LG G5', 					hover: false },
+							{ phone_name: 'LG K/L Series', 			hover: false },
+							{ phone_name: 'LG Nexus Series', 		hover: false },
+							{ phone_name: 'LG Optimus Series', 		hover: false },
+							{ phone_name: 'LG Prada 3.0', 			hover: false },
+							{ phone_name: 'Motorola Moto Series',	hover: false },
+							{ phone_name: 'Motorola Nexus 6', 		hover: false },
+							{ phone_name: 'Motorola Razr Series', 	hover: false },
+							{ phone_name: 'Nokia Lumia Series', 	hover: false },
+							{ phone_name: 'OnePlus One', 			hover: false },
+							{ phone_name: 'Oppo F/R Series', 		hover: false },
+							{ phone_name: 'Sony Xperia Series', 	hover: false },
+							{ phone_name: 'Sony Z2/Z4 Tablet', 		hover: false }
+						]
+					}
+				],
+			}
+		});
+	</script>
+</body>
+</html>

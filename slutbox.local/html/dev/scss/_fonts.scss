@@ -1,0 +1,47 @@
+@font-face {
+	font-family: 'Arquitecta';
+	src: url('fonts/Arquitecta-Light.eot');
+	src: local('☺'),
+			url('fonts/Arquitecta-Light.woff') format('woff'),
+			url('fonts/Arquitecta-Light.ttf') format('truetype'),
+			url('fonts/Arquitecta-Light.svg') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Arquitecta';
+	src: url('fonts/Arquitecta-Regular.eot');
+	src: local('☺'),
+			url('fonts/Arquitecta-Regular.woff') format('woff'),
+			url('fonts/Arquitecta-Regular.ttf') format('truetype'),
+			url('fonts/Arquitecta-Regular.svg') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Arquitecta';
+	src: url('fonts/Arquitecta-Bold.eot');
+	src: local('☺'),
+			url('fonts/Arquitecta-Bold.woff') format('woff'),
+			url('fonts/Arquitecta-Bold.ttf') format('truetype'),
+			url('fonts/Arquitecta-Bold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Arquitecta';
+	src: url('fonts/Arquitecta-Heavy.eot');
+	src: local('☺'),
+			url('fonts/Arquitecta-Heavy.woff') format('woff'),
+			url('fonts/Arquitecta-Heavy.ttf') format('truetype'),
+			url('fonts/Arquitecta-Heavy.svg') format('svg');
+	font-weight: 900;
+	font-style: normal;
+}
+html, body{
+	font-family: 'Arquitecta';
+	font-weight: 400;
+	*{
+		font-family: 'Arquitecta';
+	}
+}

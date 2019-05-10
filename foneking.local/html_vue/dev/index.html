@@ -1,0 +1,362 @@
+<!-- include header -->
+//= include/header.html
+
+<!-- content -->
+<section class="content-form" >
+
+	<!-- Step 1 -->
+	<div class="form-wrapper" id="step1Box">
+		<div class="form-wrapper__item">
+			<span class="text">I need help with my</span>
+			<span class="select select-phone modalOpen" data-modal="phone">Select phone</span>
+		</div>
+		<div class="form-wrapper__item">
+			<span class="text">for</span>
+			<span class="select select-problem modalOpen" data-modal="problem">Select problem</span>
+		</div>
+		<button class="goToStep2">Get started</button>
+	</div>
+
+	<!-- Step 2 -->
+	<div class="diagnosis-wrapper wrapper" id="step2Box">
+		<button class="back backToStep1">Back</button>
+		<div class="diagnosis-inner">
+			<div class="diagnosis-asks">
+				Do you want to <span class="modalOpen" data-modal="diagnosis">save the data?</span>
+			</div>
+			<ul class="diagnosis-options">
+				<li><button>YES</button></li>
+				<li><button>NO</button></li>
+				<li><button class="btn-with-ask">What is it</button><i class="modalOpen" data-modal="diagnosis"></i></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Step 3 -->
+	<div class="summary-wrapper wrapper" id="step3Box">
+		<button class="back backToStep2">Back</button>
+		<div class="summary-inner">
+			<h2>Here's the diagnosis summary</h2>
+			<div class="summary-content">
+				<div class="summary-content__left">
+					<div class="summary-content__need">It seems you need partial data recovery.</div>
+					<div class="summary-content__cost">
+						Selected repair option
+						<button class="modalOpen">PARTIAL DATA RECOVERY</button>
+						<b>3-5 days</b>
+						<span>expected time</span>
+						<b>$200</b>
+						<span>estimated cost</span>
+					</div>
+				</div>
+				<div class="summary-content__right">
+					<p>We will need to have a closer look at your device to confirm this initial diagnosis.</p>
+					<p>For a faster service, please fill out your details below.</p>
+					<ul>
+						<li><button class="goToStep5"> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="18.312" viewBox="0 0 25 18.312"> <defs> </defs> <path class="cls-1" d="M1117.42,672.009V655.834h-20.84v16.175h-2.08v2.156h25v-2.156h-2.08Zm-8.34,0h-4.16v-1.078h4.16v1.078Zm6.25-3.235h-16.66V657.991h16.66v10.783Z" transform="translate(-1094.5 -655.844)"></path></svg> Book online </button></li>
+						<li><button class="goToStep4"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="22.5" viewBox="0 0 25 22.5"> <defs> </defs> <path class="cls-1" d="M1118.11,583.25h-22.22v2.812h22.22V583.25Zm1.39,14.06V594.5l-1.39-7.03h-22.22l-1.39,7.03v2.812h1.39v8.436h13.89V597.31h5.55v8.436h2.78V597.31h1.39Zm-12.5,5.624h-8.33V597.31H1107v5.624Z" transform="translate(-1094.5 -583.25)"></path> </svg> Visit us</button></li>
+						<li><button class="goToStep4"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" viewBox="0 0 25 20"> <defs> </defs> <path class="cls-1" d="M1119.2,880.554a17.507,17.507,0,0,0-24.4,0,1.1,1.1,0,0,0,0,1.506l2.59,2.629a1,1,0,0,0,.74.307,1.026,1.026,0,0,0,.72-0.3,11.9,11.9,0,0,1,2.78-1.962,1.062,1.062,0,0,0,.58-0.954V878.5a14.96,14.96,0,0,1,4.79-.774,15.264,15.264,0,0,1,4.79.763v3.287a1.072,1.072,0,0,0,.58.954,12.014,12.014,0,0,1,2.78,1.962,0.982,0.982,0,0,0,.72.3,1,1,0,0,0,.74-0.308l2.59-2.629A1.081,1.081,0,0,0,1119.2,880.554Zm-2.66-11.037-1.47-1.5-3.71,3.764,1.47,1.5S1116.43,869.548,1116.54,869.517Zm-8.5-4.517h-2.08v5.3h2.08V865Zm-6.87,8.281,1.47-1.5-3.7-3.775-1.48,1.506C1097.57,869.548,1101.17,873.281,1101.17,873.281Z" transform="translate(-1094.5 -865)"></path> </svg> Call us</button></li>
+						<li><button class="goToStep5"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="21.688" viewBox="0 0 25 21.688"> <defs> </defs> <path class="cls-1" d="M1094.51,745.833L1119.5,735l-24.99-10.833-0.01,8.426L1112.35,735l-17.85,2.407Z" transform="translate(-1094.5 -724.156)"></path> </svg> Email us</button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Step 4 -->
+	<div class="info-wrapper wrapper" id="step4Box">
+		<button class="back backToStep3">Back</button>
+		<h2>Thank you!</h2>
+		<h3>Feel free to come visit us at your nearest store.</h3>
+
+		<div class="box">
+			<div class="box__left" style="background-image: url(img/Fone-Fix-Sydney-CBD-retail-shop-internal-photo-370x240.jpg);">
+				<div class="box__left-inner">
+					<h3>REPAIR CENTRE HQ</h3>
+					<p><a href="callto:02 9698 8066">02 9698 8066</a> <br> <a href="https://foneking.com.au/location/headquarters/" nofollow target="_blank">view store</a></p>
+				</div>
+			</div>
+			<div class="box__right">
+				<p>Suite 707 <br> (Next to The Grounds of Alexandria) <br> 2 Huntley Street <br> Alexandria NSW 2015</p>
+				<a href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d206.94891975293191!2d151.1937558!3d-33.9106967!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12b1b6a3f5af1d%3A0x652d16f12f697613!2zNzA3LzIgSHVudGxleSBTdCwgQWxleGFuZHJpYSBOU1cgMjAxNSwg0JDQstGB0YLRgNCw0LvQuNGP!5e0!3m2!1sru!2sua!4v1557221199566!5m2!1sru!2sua" target="_blank" class="button-link button-link_modal small blue" itemprop="hasMap">Get directions<i class="icon-link"></i></a>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="box__left" style="background-image: url(img/Fone-Fix-Bondi-Junction-retail-shop-internal-photo-1-370x240.jpg);">
+				<div class="box__left-inner">
+					<h3>WESTFIELD SYDNEY</h3>
+					<p><a href="callto:0292333688">02 9233 3688</a> <br> <a href="https://foneking.com.au/location/centre-point/" nofollow target="_blank">view store</a></p>
+				</div>
+			</div>
+			<div class="box__right">
+				<p>Westfield Sydney <br> (Urban Precinct, opposite Superdry) <br> Level 1, Kiosk 102a <br> 184 Pitt Street <br>Sydney NSW 2000</p>
+				<a href="https://goo.gl/maps/54WsacuBv2h7sbPv5" target="_blank" class="button-link small blue" itemprop="hasMap">Get directions<i class="icon-link"></i></a>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="box__left" style="background-image: url(img/Fone-Fix-Sydney-CBD-retail-shop-internal-photo-370x240.jpg);">
+				<div class="box__left-inner">
+					<h3>BONDI JUNCTION</h3>
+					<p><a href="callto:0293871500">02 9387 1500</a> <br> <a href="https://foneking.com.au/location/bondi-junction/" nofollow target="_blank">view store</a></p>
+				</div>
+			</div>
+			<div class="box__right">
+				<p>Westfield Bondi Junction <br> Shop 1012, Level 1 <br> 500 Oxford Street <br>Bondi Junction NSW 2022</p>
+				<a href="https://goo.gl/maps/G92kSimcbDfiBqVR6" target="_blank" class="button-link small blue" itemprop="hasMap">Get directions<i class="icon-link"></i></a>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="box__left" style="background-image: url(img/Fone-Fix-Bondi-Junction-retail-shop-internal-photo-1-370x240.jpg);">
+				<div class="box__left-inner">
+					<h3>BURWOOD</h3>
+					<p><a href="callto:0297449008">02 9744 9008</a> <br> <a href="https://foneking.com.au/location/burwood/" nofollow target="_blank">view store</a></p>
+				</div>
+			</div>
+			<div class="box__right">
+				<p>Westfield Burwood <br> Ground Floor, Shop 130 <br> 100 Burwood Road <br> Burwood NSW 2134</p>
+				<a href="https://goo.gl/maps/uQag8osczWWSnT5T8" target="_blank" class="button-link small blue" itemprop="hasMap">Get directions<i class="icon-link"></i></a>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="box__left" style="background-image: url(img/Fone-Fix-Sydney-CBD-retail-shop-internal-photo-370x240.jpg);">
+				<div class="box__left-inner">
+					<h3>CASTLE TOWERS</h3>
+					<p><a href="callto:0298944785">02 9894 4785</a> <br> <a href="https://foneking.com.au/location/castle-towers/" nofollow target="_blank">view store</a></p>
+				</div>
+			</div>
+			<div class="box__right">
+				<p>Castle Towers Shopping Centre <br> Shop 212 <br> 6-14 Castle Street <br> Castle Hill, NSW 2154</p>
+				<a href="https://goo.gl/maps/xMxJRDRx63gMs5rK8" target="_blank" class="button-link small blue" itemprop="hasMap">Get directions<i class="icon-link"></i></a>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="box__left" style="background-image: url(img/Fone-Fix-Bondi-Junction-retail-shop-internal-photo-1-370x240.jpg);">
+				<div class="box__left-inner">
+					<h3>MIRANDA</h3>
+					<p><a href="callto:0295251118">02 9525 1118</a> <br> <a href="https://foneking.com.au/location/miranda/" nofollow target="_blank">view store</a></p>
+				</div>
+			</div>
+			<div class="box__right">
+				<p>Westfield Miranda <br> Level 1, Shop 1036 <br> 600 Kingsway <br> Miranda NSW 2228</p>
+				<a href="https://goo.gl/maps/dY66acRFe27vdw8eA" target="_blank" class="button-link small blue" itemprop="hasMap">Get directions<i class="icon-link"></i></a>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="box__left" style="background-image: url(img/Fone-Fix-Sydney-CBD-retail-shop-internal-photo-370x240.jpg);">
+				<div class="box__left-inner">
+					<h3>QVB</h3>
+					<p><a href="callto:0292836988">02 9283 6988</a> <br> <a href="https://foneking.com.au/location/qvb/" nofollow target="_blank">view store</a></p>
+				</div>
+			</div>
+			<div class="box__right">
+				<p>Queen Victoria Building <br> Shop 44, Lower Ground Level <br> 455 George Street <br> Sydney NSW 2000</p>
+				<a href="https://goo.gl/maps/vgT6GVuw7FHxvuWWA" target="_blank" class="button-link small blue" itemprop="hasMap">Get directions<i class="icon-link"></i></a>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="box__left" style="background-image: url(img/Fone-Fix-Bondi-Junction-retail-shop-internal-photo-1-370x240.jpg);">
+				<div class="box__left-inner">
+					<h3>TUGGERAH</h3>
+					<p><a href="callto:0243515558">02 4351 5558</a> <br> <a href="https://foneking.com.au/location/tuggerah/" nofollow target="_blank">view store</a></p>
+				</div>
+			</div>
+			<div class="box__right">
+				<p>Westfield Tuggerah <br> (Next door to Optus) <br> Level 1, Shop 1102 <br> 50 Wyong Road <br> Tuggerah NSW 2259</p>
+				<a href="https://goo.gl/maps/kcZbpydNUoKGg6eSA" target="_blank" class="button-link small blue" itemprop="hasMap">Get directions<i class="icon-link"></i></a>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="box__left" style="background-image: url(img/Fone-Fix-Sydney-CBD-retail-shop-internal-photo-370x240.jpg);">
+				<div class="box__left-inner">
+					<h3>WARRINGAH</h3>
+					<p><a href="callto:0299073338">02 9907 3338</a> <br> <a href="https://foneking.com.au/location/warringah/" nofollow target="_blank">view store</a></p>
+				</div>
+			</div>
+			<div class="box__right">
+				<p>Westfield Warringah Mall <br> (Opposite Athlete's Foot) <br> Ground Level, Shop 1409 <br> Condamine St & Old Pittwater Road <br> Brookvale NSW 2100</p>
+				<a href="https://goo.gl/maps/JWDT8kE3KPtWy7vTA" target="_blank" class="button-link small blue" itemprop="hasMap">Get directions<i class="icon-link"></i></a>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="box__left" style="background-image: url(img/Fone-Fix-Bondi-Junction-retail-shop-internal-photo-1-370x240.jpg);">
+				<div class="box__left-inner">
+					<h3>BRISBANE</h3>
+					<p><a href="callto:0732106666">07 3210 6666</a> <br> <a href="https://foneking.com.au/location/brisbane/" nofollow target="_blank">view store</a></p>
+				</div>
+			</div>
+			<div class="box__right">
+				<p>Myer Centre Brisbane <br> (Next to Shaver Shop) <br> Shop 112 <br> 91 Queen Street <br>Brisbane QLD 4000</p>
+				<a href="https://goo.gl/maps/Yqg9GMoG9AHVn6347" target="_blank" class="button-link small blue" itemprop="hasMap">Get directions<i class="icon-link"></i></a>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="box__left" style="background-image: url(img/Fone-Fix-Sydney-CBD-retail-shop-internal-photo-370x240.jpg);">
+				<div class="box__left-inner">
+					<h3>CARINDALE</h3>
+					<p><a href="callto:0733248588">07 3324 8588</a> <br> <a href="https://foneking.com.au/location/carindale/" nofollow target="_blank">view store</a></p>
+				</div>
+			</div>
+			<div class="box__right">
+				<p>Westfield Carindale <br> Ground Level, Kiosk 112 <br> 1151 Creek Road <br> Carindale QLD 4152</p>
+				<a href="https://goo.gl/maps/ur2fHsJQh6bXbxfB8" target="_blank" class="button-link small blue" itemprop="hasMap">Get directions<i class="icon-link"></i></a>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="box__left" style="background-image: url(img/Fone-Fix-Bondi-Junction-retail-shop-internal-photo-1-370x240.jpg);">
+				<div class="box__left-inner">
+					<h3>CHERMSIDE</h3>
+					<p><a href="callto:0732563026">07 3256 3026</a> <br> <a href="https://foneking.com.au/location/chermside-accessories/" nofollow target="_blank">view store</a></p>
+				</div>
+			</div>
+			<div class="box__right">
+				<p>Westfield Chermside <br> Level 1 <br> 395 Hamilton Road <br> Chermside QLD 4032</p>
+				<a href="https://goo.gl/maps/uXUwrpqzph7UPaHCA" target="_blank" class="button-link small blue" itemprop="hasMap">Get directions<i class="icon-link"></i></a>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="box__left" style="background-image: url(img/Fone-Fix-Sydney-CBD-retail-shop-internal-photo-370x240.jpg);">
+				<div class="box__left-inner">
+					<h3>PENRITH</h3>
+					<p><a href="callto:0247228050">02 4722 8050</a> <br> <a href="https://foneking.com.au/location/penrith/" nofollow target="_blank">view store</a></p>
+				</div>
+			</div>
+			<div class="box__right">
+				<p>Ground Floor <br> Shop 27 <br> Westfield Penrith</p>
+				<a href="https://goo.gl/maps/Mnh5oNKMJ5YzDiwN8" target="_blank" class="button-link small blue" itemprop="hasMap">Get directions<i class="icon-link"></i></a>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="box__full">
+				<h4>iPhone 7 & 7 Plus cases now available in our stores</h4>
+				<p>Come and shop through our large selection</p>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Step 5 -->
+	<div class="contact-wrapper wrapper" id="step5Box">
+		<button class="back backToStep3">Back</button>
+		<div class="contact-inner">
+			<h2>It seems you need a new front glass.</h2>
+			<div class="contact-content">
+				<div class="contact-content__left">
+					<div class="contact-content__need">It seems you need partial data recovery.</div>
+					<div class="contact-content__cost">
+						<b>30 mins</b>
+						<span>expected time</span>
+						<b>$200</b>
+						<span>estimated cost</span>
+					</div>
+				</div>
+				<div class="contact-content__right">
+					<p>We will need to have a closer look at your device to confirm this initial diagnosis.</p>
+					<p>For a faster service, please fill out your details below.</p>
+					<form action="/" id="contactForm" method="POST">
+						<input type="hidden" name="phone_Model" value="">
+						<input type="hidden" name="phone_Problem" value="">
+						<input type="hidden" name="phone_Diagnosis" value="">
+						<ul class="row">
+							<li class="col-sm-6"><label for="name">Name</label><input name="name" type="text" required></li>
+							<li class="col-sm-6"><label for="email">Email</label><input name="email" type="email" required></li>
+							<li class="col-sm-6"><label for="phone">Phone number</label><input name="phone" type="tel" required></li>
+							<li class="col-sm-6"><label for="date">Time and Day</label><input name="date" type="date" required></li>
+							<li class="col-sm-6"><label for="store">Store</label><input name="store" type="text" required></li>
+							<li class="col-sm-6"><label for="captcha">987N</label><input name="captcha" type="text" required></li>
+							<li class="col-sm-12"><input type="submit" value="send my details"></li>
+						</ul>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<ul class="progress">
+		<li class="step1 active">DEVICE & SERVICE <span></span></li>
+		<li class="step2">DIAGNOSIS <span></span></li>
+		<li class="step3">SUMMARY & OPTIONS <span></span></li>
+	</ul>
+
+</section>
+
+<section class="modal modal-phone">
+	<div class="modal-wrapper">
+		<button class="close-modal">×</button>
+		<form class="search">
+			<input type="search" placeholder="Search for your device model">
+			<input type="submit">
+		</form>
+		<span class="fix-title">IPHONE REPAIRS</span>
+
+		<ul class="phone-list" id="phone-list">
+			<li v-for="list in lists">
+				<span class="data-fix">{{ list.list_name }}</span>
+				<ul class="option" id="#list.list_id"  >
+					<li v-for="item in list.list_items" @mouseenter="item.hover = true" @mouseleave="item.hover = false" :class="item.hover ? 'active' : ''" v-on:click="selectedPhone">{{ item.phone_name }}</li>
+				</ul>
+			</li>
+		</ul>
+
+	</div>
+</section>
+
+<section class="modal modal-problem">
+	<div class="modal-wrapper">
+		<button class="close-modal">×</button>
+		<form class="search">
+			<input type="search" placeholder="Search for your device model">
+			<input type="submit">
+		</form>
+		<ul class="phone-list" id="problem-list">
+			<li>
+				<ul class="option">
+					<li>data recovery</li>
+					<li>liquid damage repair</li>
+					<li>no power up</li>
+					<li>screen repairs</li>
+					<li>software fault</li>
+					<li>other</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section class="modal modal-diagnosis">
+	<div class="modal-wrapper">
+		<button class="close-modal">×</button>
+		<div class="modal-content">
+			<img src="img/datarecovery_popup_03.png" alt="">
+			<div class="modal-content__text">
+				<h2>What is data recovery?</h2>
+				<p>Data recovery is a process used to extract information&nbsp;from&nbsp;electronic devices. Data can be lost for a variety of reasons and we have the solutions to get it back.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="modal modal-map">
+	<div class="modal-wrapper">
+		<button class="close-modal">×</button>
+		<div class="modal-content">
+			<iframe src="" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen></iframe>
+		</div>
+	</div>
+</section>
+
+
+<!-- include footer -->
+//= include/footer.html

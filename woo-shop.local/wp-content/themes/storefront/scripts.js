@@ -172,15 +172,6 @@
 			});
 		});
 
-		$(document).on('click', '.addProduct', function(e){
-			e.preventDefault();
-			console.log('product added to cart');
-			$("[name='update_cart']").trigger("click");
-			// setTimeout(function(){
-			// 	$('#place_order').click();
-			// }, 1500);
-		});
-
 
 	});
 })( jQuery );
