@@ -336,13 +336,23 @@ body, html {
   font-size: 14px;
   background-color: #000; }
 
+@-webkit-keyframes pulse {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0.6; } }
+
+@keyframes pulse {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0.6; } }
+
 header {
   padding-top: 30px;
   padding-bottom: 30px;
   min-height: 100vh;
-  position: relative;
-  background-image: radial-gradient(#ff4ca8, #58243d);
-  overflow: hidden; }
+  position: relative; }
   header:before {
     content: "";
     width: 100%;
@@ -353,19 +363,25 @@ header {
     bottom: 0;
     display: block;
     position: absolute;
-    background: url("../img/amber.png") no-repeat center 0/auto 100%; }
+    background: url("../img/amber.png") no-repeat center 0/auto 100%;
+    opacity: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    z-index: 2; }
   header:after {
     content: "";
-    display: block;
-    position: absolute;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
     left: 0;
     right: 0;
-    background: #000;
-    height: 15px;
-    border-radius: 50%;
-    -webkit-transform: translate(0, 50%);
-    transform: translate(0, 50%); }
+    top: 0;
+    bottom: 0;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    -webkit-animation: pulse 2s linear infinite alternate;
+    animation: pulse 2s linear infinite alternate;
+    background-image: radial-gradient(#ff4ca8, #58243d); }
   header .container {
     position: relative;
     z-index: 2; }
@@ -374,7 +390,11 @@ header {
     display: block;
     width: auto;
     width: 205px;
-    max-width: 100%; }
+    max-width: 100%;
+    -webkit-transform: translate(0, 100vh);
+    transform: translate(0, 100vh);
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out; }
     header .logo img {
       width: 100%;
       height: auto;
@@ -386,7 +406,12 @@ header {
     line-height: 115px;
     text-align: center;
     color: white;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    opacity: 0;
+    -webkit-transform: translate(0, 25%);
+    transform: translate(0, 25%);
+    -webkit-transition: .3s ease-in-out .6s;
+    transition: .3s ease-in-out .6s; }
     header h1 span {
       color: #FB7EC3;
       line-height: 1;
@@ -407,14 +432,43 @@ header {
     line-height: 23px;
     text-align: center;
     color: #FFFFFF;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    opacity: 0;
+    -webkit-transform: translate(0, 50%);
+    transform: translate(0, 50%);
+    -webkit-transition: .3s ease-in-out .5s;
+    transition: .3s ease-in-out .5s; }
   header .btn {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    opacity: 0;
+    -webkit-transform: translate(0, 50%);
+    transform: translate(0, 50%);
+    -webkit-transition: .3s ease-in-out .4s;
+    transition: .3s ease-in-out .4s; }
   header .foot-note {
     font-size: 14px;
     line-height: 18px;
     text-align: center;
-    color: #A9A9A9; }
+    color: #A9A9A9;
+    opacity: 0;
+    -webkit-transform: translate(0, 50%);
+    transform: translate(0, 50%);
+    -webkit-transition: .3s ease-in-out .3s;
+    transition: .3s ease-in-out .3s; }
+  header.loaded:before {
+    opacity: 1; }
+  header.loaded .logo {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); }
+  header.loaded h1, header.loaded .title-note, header.loaded .btn, header.loaded .foot-note {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); }
+
+main {
+  display: none;
+  position: relative;
+  z-index: 2; }
 
 .btn {
   max-width: 100%;
@@ -431,7 +485,9 @@ header {
   color: #FFFFFF;
   position: relative; }
   .btn:hover {
-    opacity: .8; }
+    -webkit-transition: opacity .2s ease !important;
+    transition: opacity .2s ease !important;
+    opacity: .8 !important; }
   .btn__purple {
     background: #F344A6; }
   .btn span {
@@ -453,6 +509,18 @@ header {
   position: relative;
   padding: 80px 0;
   overflow: hidden; }
+  .brand:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    height: 15px;
+    border-radius: 50%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%); }
   .brand:after {
     content: "";
     display: block;
