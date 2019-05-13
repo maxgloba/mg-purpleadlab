@@ -1,0 +1,33 @@
+{
+    "prod": {
+      "KP52W7FEMLNL8": {
+        "name": "Standart Package",
+        "price": 98.00,
+        "shipping": 9.95,
+        "isSubscribe": false,
+        "canBeSubscribed": true,
+        "cardImgSrc": "./wp-content/themes/mg-theme/img/p1.jpg"
+      },
+      "3GXJ8HLMG2F9Q": {
+        "name": "Monthly Subscription",
+        "price": 88.00,
+        "isSubscribe": true,
+        "canBeSubscribed": true,
+        "cardImgSrc": "./wp-content/themes/mg-theme/img/s-offer.jpg"
+      },
+      "AP52W7FEMLNL8": {
+        "name": "Premium Package",
+        "price": 225.00,
+        "isSubscribe": false,
+        "canBeSubscribed": false,
+        "cardImgSrc": "./wp-content/themes/mg-theme/img/p2.jpg"
+      },
+      "BP52W7FEMLNL8": {
+        "name": "Platinum Package",
+        "price": 294.00,
+        "isSubscribe": false,
+        "canBeSubscribed": false,
+        "cardImgSrc": "./wp-content/themes/mg-theme/img/p3.jpg"
+      }
+    }
+  }

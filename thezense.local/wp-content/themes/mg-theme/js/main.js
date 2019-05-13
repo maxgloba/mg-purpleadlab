@@ -842,6 +842,7 @@ function init() {
 
   function setProductIdOnFirstStep(e) {
     e.preventDefault(); // trackers
+    console.log(e.target);
 
     obApi('track', 'Add to Cart');
     fbq('track', 'AddToCart');
