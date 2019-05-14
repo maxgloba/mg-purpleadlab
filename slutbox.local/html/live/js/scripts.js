@@ -1,65 +1,85 @@
 (function(){
 
-	var header = document.getElementById("main-header");
-	header.className += "loaded";
+	$("#main-header").addClass("loaded");
 
-	window.addEventListener("DOMContentLoaded", function(){
-		var main = document.getElementById("main");
-		main.setAttribute("style", "display:block;");
+	$(window).on("load", function(){
+		$("#main").css('display', 'block');
 	});
 
-	function scrollIt(destination, duration = 200, easing = 'linear', callback) {
-		const easings = {
-			linear(t) {
-				return t;
+	$('#openOffer').on("click", function(){
+		$('#offer').addClass('active');
+		$("html, body").animate({ scrollTop: $('#offer').offset().top }, 800);
+	});
+
+	$('#closeOffer').on("click", function(e){
+		e.preventDefault();
+		$('#offer').removeClass('active');
+		$("html, body").animate({ scrollTop: 0 }, 800);
+	});
+
+	$(window).scroll(function(){
+		var winHeight = $(this).height();
+		var winTop = $(window).scrollTop();
+		$('.anim_box').each(function(){
+			var elemDataAnim = $(this).data('animate');
+			var elemDataDelay = $(this).data('delay');
+			var elemHeight = $(this).height() * 0.35;
+			var elemPosition = $(this).offset().top - winTop - winHeight + elemHeight;
+
+			if (elemPosition <= 0) {
+				$(this).addClass('animated '+elemDataAnim).css('animation-delay', elemDataDelay);
 			}
-		};
-		const start = window.pageYOffset;
-		const startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
-		const documentHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
-		const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
-		const destinationOffset = typeof destination === 'number' ? destination : destination.offsetTop;
-		const destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset);
-		if ('requestAnimationFrame' in window === false) {
-			window.scroll(0, destinationOffsetToScroll);
-			if (callback) {
-				callback();
-			}
-			return;
+		});
+	});
+
+	$(document).on('click', '.openModal', function(e){
+		e.preventDefault();
+
+		var modalName = $(this).data('modal');
+		var modalContent = $('#'+modalName).html();
+		var winWidth = $(window).width();
+
+		if (winWidth>1200) {
+			$('html').css({
+				'overflow-y': 'hidden',
+				'margin-right': '17px',
+			});
+		} else {
+			$('html').css('overflow-y', 'hidden');
 		}
-		function scroll() {
-			const now = 'now' in window.performance ? performance.now() : new Date().getTime();
-			const time = Math.min(1, ((now - startTime) / duration));
-			const timeFunction = easings[easing](time);
-			window.scroll(0, Math.ceil((timeFunction * (destinationOffsetToScroll - start)) + start));
-			if (window.pageYOffset === destinationOffsetToScroll) {
-				if (callback) {
-					callback();
-				}
-				return;
+
+		$('#modal').remove();
+		$('body').append('<section class="modal" id="modal"><div class="modal-inner"><button id="closeModal">+</button><div class="container">'+modalContent+'</div></div></section>');
+
+		setTimeout(function(){
+
+			$('#modal').fadeIn('fast').addClass('modal-active');
+			$('#modal .modal-inner').css({
+				'transform': 'translate(0, 0)',
+				'opacity': 1,
+			});
+		}, 100);
+	});
+	$(document).on('click', '#closeModal', function(e){
+		e.preventDefault();
+
+		var winWidth = $(window).width();
+
+		$('#modal .modal-inner').css({
+			'transform': 'translate(0, 1000px)',
+			'opacity': 0,
+		});
+		$('#modal').fadeOut('slow', function(){
+			$(this).remove();
+			if (winWidth>1200) {
+				$('html').css({
+					'overflow-y': 'auto',
+					'margin-right': '0px',
+				});
+			} else {
+				$('html').css('overflow-y', 'auto');
 			}
-			requestAnimationFrame(scroll);
-		}
-		scroll();
-	}
-
-	var offer = document.getElementById('offer');
-
-	var openOffer = document.getElementById('openOffer');
-	openOffer.addEventListener("click", function(){
-		scrollIt( offer, 800, 'linear');
-		offer.classList.add('active');
+		});
 	});
-
-	var closeOffer = document.getElementById('closeOffer');
-	closeOffer.addEventListener("click", function(){
-		offer.classList.remove('active');
-	});
-
-	// var scrollToForm = document.getElementById('scrollToForm');
-	// scrollToForm.addEventListener("click", function(){
-	// 	var formSection = document.getElementById('formSection');
-	// 	scrollIt( formSection, 800, 'linear');
-	// });
 
 })();

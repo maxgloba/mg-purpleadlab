@@ -23,6 +23,7 @@ gulp.task('sass', function () {
 			cascade: false
 		}))
 		.pipe(gulp.dest('live/css'))
+		.pipe(gulp.dest('../wp-content/themes/mg-theme/css'))
 		.pipe(browserSync.reload({stream: true}));
 });
 
@@ -50,6 +51,7 @@ gulp.task('js', function(){
 	return gulp.src('dev/js/**/*.js')
 		.pipe(rigger())
 		.pipe(gulp.dest('live/js'))
+		.pipe(gulp.dest('../wp-content/themes/mg-theme/js'))
 		.pipe(browserSync.reload({stream: true}));
 });
 

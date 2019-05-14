@@ -842,7 +842,6 @@ function init() {
 
   function setProductIdOnFirstStep(e) {
     e.preventDefault(); // trackers
-console.log(e.target);
     obApi('track', 'Add to Cart');
     fbq('track', 'AddToCart');
 
@@ -1005,10 +1004,10 @@ console.log(e.target);
     if (e) {
       e.preventDefault();
     }
+    $('footer').removeClass('white');
+    $('#formSection').addClass('active');
+    $("html, body").animate({ scrollTop: $('#formSection').offset().top }, 'slow');
 
-    gsap_TweenLite__WEBPACK_IMPORTED_MODULE_0__["default"].to(window, 1, {
-        scrollTo: formSection
-    });
 
     // var handler = function handler() {
       // gsap_TweenLite__WEBPACK_IMPORTED_MODULE_0__["default"].to(window, 1, {

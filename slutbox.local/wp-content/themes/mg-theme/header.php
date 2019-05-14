@@ -109,13 +109,38 @@
 			<div class="container">
 				<h1><?php the_field('sos_title'); ?></h1>
 				<div class="s-offer-section__dscr-wrap row">
-					<div class="col-md-5">
+					<div class="col-sm-5">
 						<img src="<?php the_field('sos_image'); ?>" alt="<?php the_field('sos_title'); ?>">
 					</div>
-					<div class="col-md-7">
+					<div class="col-sm-7">
 						<?php the_field('sos_content'); ?>
 						<div id="subscribe-btns">
-							<a id="scrollToForm" class="btn btn__purple accent-btn alert" href="#" data-step="1" data-answer="yes" data-product-id="3GXJ8HLMG2F9Q" data-product-name="SlutBox" data-product-shipping="9.99" data-product-price="15.01" data-product-cartimg="img/cart-img.svg">YES I WANT</a>
+							<?php
+								$args = array(
+									'post_type'			=> 'mg_shop_products',
+									'posts_per_page'	=> -1,
+									'orderby'			=> 'date',
+									'order'				=> 'ASC'
+								);
+								$myQuery = new WP_Query($args);
+							?>
+							<?php if ($myQuery->have_posts()): ?>
+								<?php while ($myQuery->have_posts()): $myQuery->the_post();
+
+									$product_id = get_field('product_id');
+									$most_popular = get_field('most_popular');
+									$best_deal = get_field('best_deal');
+									$price = get_field('price');
+									$issubscribe = get_field('issubscribe');
+									$canbesubscribed = get_field('canbesubscribed');
+									$shipping = get_field('shipping');
+
+									if(!$issubscribe):
+								?>
+									<a id="scrollToForm" class="btn btn__purple accent-btn alert" href="#" data-step="2" data-answer="yes" data-product-id="<?php echo $product_id; ?>" data-product-name="<?php the_title(); ?>" <?php if($shipping > 0){ echo 'data-product-shipping="'. $shipping .'"'; } ?> data-product-price="<?php echo $price; ?>" data-product-cartimg="<?php echo get_the_post_thumbnail_url(); ?>">YES I WANT</a>
+								</li>
+								<?php endif; endwhile; wp_reset_postdata(); ?>
+							<?php endif; ?>
 							<a class="btn btn__no s-offer-section__no-s-offer-link" href="#" data-step="2" data-answer="no" id="closeOffer">No, I don’t want</a>
 						</div>
 					</div>

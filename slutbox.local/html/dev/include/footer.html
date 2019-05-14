@@ -1,10 +1,10 @@
 
 		</main>
-		<footer>
+		<footer class="white">
 			<div class="container">
-				<h1>Get the Latest</h1>
+				<h1 class="anim_box" data-animate="fadeInLeft">Get the Latest</h1>
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-6 anim_box" data-animate="fadeInLeft" data-delay=".2s">
 						<p>Need all of the latest scoop <br> straight from the source? <br><br>Sign up.</p>
 					</div>
 					<div class="col-md-6">
@@ -14,9 +14,28 @@
 						</form>
 					</div>
 				</div>
-				<small>© 2019 MUVA LUVA, LLC. Slutbox by Amber Rose. All Rights Reserved. See our <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></small>
+				<p class="anim_box" data-animate="fadeInLeft">
+					<small>© 2019 MUVA LUVA, LLC. Slutbox by Amber Rose. All Rights Reserved. See our <a href="#" class="openModal" data-modal="terms">Terms & Conditions</a> and <a href="#" class="openModal" data-modal="privacy">Privacy Policy</a></small>
+				</p>
 			</div>
 		</footer>
+
+		<template id="terms">
+			<h1>Terms & Conditions</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga vitae itaque tempora minus architecto ea error amet neque labore ipsa.</p>
+			<p>Iste dicta accusamus sapiente et omnis. Omnis minima temporibus possimus cumque earum quos quidem numquam optio ducimus consequuntur. Quam, ratione!</p>
+			<p>Maxime ea, asperiores in ducimus unde harum eveniet aut eligendi dolorum, illum illo sunt. Repellat placeat, qui quos id dicta.</p>
+			<p>Corporis voluptatibus ullam asperiores, officiis tempore ipsum nesciunt, odit porro inventore molestias ratione tenetur unde quibusdam non modi suscipit. Eum!</p>
+			<p>Sunt odit quam, rerum quas molestiae consectetur vitae ab, aspernatur neque ipsum placeat qui quibusdam quasi nam quisquam. Quis, vel!</p>
+		</template>
+		<template id="privacy">
+			<h1>Privacy Policy</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente fugit optio quidem sit dolorem deleniti voluptate. Eligendi, assumenda praesentium enim.</p>
+			<p>Deserunt, qui, blanditiis! Tempore praesentium quis eius placeat eum quasi quidem voluptatum consectetur atque perspiciatis, animi, cumque, nostrum in recusandae.</p>
+			<p>Excepturi molestias, quia dignissimos aut numquam, consectetur labore ipsum, incidunt sunt nobis eaque cum animi ex magnam explicabo magni quis!</p>
+			<p>Saepe quaerat voluptatibus earum et. Maxime voluptatum minima velit maiores! Possimus veritatis, neque quod ipsam est rerum repudiandae consectetur quidem.</p>
+			<p>Consequatur aliquid laborum incidunt quasi eos debitis commodi, at aliquam iusto sed rem, non ducimus, officia exercitationem, a labore dolores.</p>
+		</template>
 
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 		<script src="https://www.paypalobjects.com/api/checkout.js"></script>

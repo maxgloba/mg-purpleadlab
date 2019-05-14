@@ -6,12 +6,14 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
+	<?php echo do_shortcode('[chargify]'); ?>
+
 <!-- content -->
 <section class="brand">
 	<div class="container">
 		<ul>
 			<?php while(has_sub_field('brands')): ?>
-				<li><img src="<?php the_sub_field('image'); ?>" alt=""></li>
+				<li class="anim_box" data-animate="zoomIn"><img src="<?php the_sub_field('image'); ?>" alt=""></li>
 			<?php endwhile; ?>
 		</ul>
 	</div>
@@ -19,7 +21,7 @@ get_header(); ?>
 
 <section class="who_we_are">
 	<div class="container">
-		<h1>Who we are</h1>
+		<h1 class="anim_box" data-animate="fadeInLeft"><?php the_field('wwa_title'); ?></h1>
 		<div class="row">
 			<div class="col-md-7">
 				<img src="<?php the_field('wwa_image'); ?>" alt="" class="who_we_are__image">
@@ -32,19 +34,19 @@ get_header(); ?>
 <section class="who_we_are who_we_are__info">
 	<div class="container" style="background-image: url(<?php the_field('am_model'); ?>);">
 		<div class="row">
-			<div class="col-md-8">
+			<div class="col-md-8 anim_box" data-animate="fadeInLeft">
 				<p class="mb60"><b><?php the_field('am_text'); ?></b></p>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-5">
+			<div class="col-md-5 anim_box" data-animate="fadeInLeft">
 				<p><?php the_field('am_desc'); ?></p>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-5">
+			<div class="col-md-5 anim_box" data-animate="fadeInLeft">
 				<div class="mom">
-					<img src="<?php the_field('am_image'); ?>" alt="">
+					<img src="<?php the_field('am_image'); ?>" alt="mom" class="anim_box" data-animate="zoomIn" data-delay=".5s">
 					<span><?php the_field('am_muva'); ?></span>
 				</div>
 			</div>
@@ -54,7 +56,7 @@ get_header(); ?>
 
 <section class="how_it_works">
 	<div class="container">
-		<h1><?php the_field('hiw_title'); ?></h1>
+		<h1 class="anim_box" data-animate="fadeInLeft"><?php the_field('hiw_title'); ?></h1>
 		<div class="row">
 			<div class="col-md-5"><?php the_field('hiw_content'); ?></div>
 			<div class="col-md-7 pl80"><?php the_field('hiw_content_wi'); ?></div>
@@ -64,83 +66,39 @@ get_header(); ?>
 
 <section class="past_boxes">
 	<div class="container">
-		<h1>Past Boxes</h1>
+		<h1 class="anim_box" data-animate="fadeInLeft"><?php the_field('pb_title'); ?></h1>
 		<div class="row">
-			<div class="col-md-6">
-				<span class="img-box"><img src="<?php echo get_template_directory_uri(); ?>/img/past/past-img-1.jpg" alt=""></span>
-				<span class="date">April 2019</span>
-				<h3>Spring Fling</h3>
-				<p>Spring is in the air! The seasons are changin’, the days are gettin’ longer and hemlines are gettin’ shorter. Everyone’s…</p>
-			</div>
-			<div class="col-md-6">
-				<span class="img-box"><img src="<?php echo get_template_directory_uri(); ?>/img/past/past-img-2.jpg" alt=""></span>
-				<span class="date">March 2019</span>
-				<h3>Get Lucky</h3>
-				<p>Happy Spring, gorgeous! March is all about easing into the new season and gearing up for spring break. (Hey –…</p>
-			</div>
-			<div class="col-md-6">
-				<span class="img-box"><img src="<?php echo get_template_directory_uri(); ?>/img/past/past-img-3.jpg" alt=""></span>
-				<span class="date">February 2019</span>
-				<h3>Stupid Cupid</h3>
-				<p>Hey Sluts! Happy V-Day to my slutty Valentines! February is one of my favorite months of the year, and I…</p>
-			</div>
-			<div class="col-md-6">
-				<span class="img-box"><img src="<?php echo get_template_directory_uri(); ?>/img/past/past-img-4.jpg" alt=""></span>
-				<span class="date">January 2019</span>
-				<h3>Salty x Amber Rose Box</h3>
-				<p>Happy New Year, Heauxs! I’m so proud to be walkin’ into 2019 with you bad bitches at my side. Issa…</p>
-			</div>
-			<div class="col-md-6">
-				<span class="img-box"><img src="<?php echo get_template_directory_uri(); ?>/img/past/past-img-5.jpg" alt=""></span>
-				<span class="date">December 2018</span>
-				<h3>Ho Ho Ho</h3>
-				<p>Happy ho-ho-holidays, Heauxs! Now matter what or how you celebrate, December is one of the most magical months of the…</p>
-			</div>
-			<div class="col-md-6">
-				<span class="img-box"><img src="<?php echo get_template_directory_uri(); ?>/img/past/past-img-6.jpg" alt=""></span>
-				<span class="date">November 2018</span>
-				<h3>Love Urself</h3>
-				<p>It’s November! Time for pumpkin pie, collard greens, mama’s mac n’ cheese and MUVA’s November Amber Rose Box ! November is…</p>
-			</div>
+			<?php $i=0; while(has_sub_field('past_boxes')): $i++; ?>
+				<div class="col-md-6 anim_box" data-animate="<?php if($i%2==0): echo 'fadeInRight'; else: echo 'fadeInLeft'; endif?>">
+					<span class="img-box"><img src="<?php the_sub_field('image'); ?>" alt="<?php the_sub_field('title'); ?>"></span>
+					<span class="date"><?php the_sub_field('date'); ?></span>
+					<h3><?php the_sub_field('title'); ?></h3>
+					<p><?php the_sub_field('text'); ?></p>
+				</div>
+			<?php endwhile; ?>
 		</div>
 	</div>
 </section>
 
 <section class="testimonials">
 	<div class="container">
-		<h1>Testimonials</h1>
+		<h1 class="anim_box" data-animate="fadeInLeft"><?php the_field('t_title'); ?></h1>
 		<div class="row">
-			<div class="col-md-3 col-xs-6">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/testimonials/testimonials-img-1.svg" alt="">
-				<h3>SLUT Girl 1</h3>
-				<h4>Los Santos</h4>
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-			</div>
-			<div class="col-md-3 col-xs-6">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/testimonials/testimonials-img-2.svg" alt="">
-				<h3>SLUT Girl 2</h3>
-				<h4>Los Santos</h4>
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae.</p>
-			</div>
-			<div class="col-md-3 col-xs-6">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/testimonials/testimonials-img-3.svg" alt="">
-				<h3>SLUT Girl 3</h3>
-				<h4>Los Santos</h4>
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
-			</div>
-			<div class="col-md-3 col-xs-6">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/testimonials/testimonials-img-4.svg" alt="">
-				<h3>SLUT Girl 4</h3>
-				<h4>Los Santos</h4>
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-			</div>
+			<?php $i=0; while(has_sub_field('testimonials')): $i++;?>
+				<div class="col-md-3 col-xs-6 anim_box" data-animate="fadeInUp" data-delay=".<?php echo $i; ?>s">
+					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_sub_field('title'); ?>">
+					<h3><?php the_sub_field('title'); ?></h3>
+					<h4><?php the_sub_field('subtitle'); ?></h4>
+					<p><?php the_sub_field('text'); ?></p>
+				</div>
+			<?php endwhile; ?>
 		</div>
 	</div>
 </section>
 
 <section class="product-section" id="product-section">
 	<div class="container">
-		<h1><?php the_field('ps_title'); ?></h1>
+		<h1 class="anim_box" data-animate="fadeInLeft"><?php the_field('ps_title'); ?></h1>
 		<?php
 			$args = array(
 				'post_type'			=> 'mg_shop_products',
@@ -183,6 +141,28 @@ get_header(); ?>
 			<div class="form-section__payform-container">
 				<div class="form-lay">
 					<div class="row">
+						<div class="col-md-5 pull_right">
+							<h3>Your order</h3>
+							<div class="form-section__cart-list-container">
+								<ul class="cart-list"></ul>
+								<div class="total-block">
+									<div class="total-block__style-line"></div>
+									<div class="total-block__info-row">
+										<div class="total-block__name"><span>Tax </span></div>
+										<div class="total-block__price"><span data-tax>---</span></div>
+									</div>
+									<div class="total-block__info-row">
+										<div class="total-block__name"> <span>Shipping</span></div>
+										<div class="total-block__price" data-shipping> <span data-shipping>---</span></div>
+									</div>
+									<div class="total-block__style-line"></div>
+									<div class="total-block__price-row">
+										<div class="total-block__name"><span>Total</span></div>
+										<div class="total-block__price large"><span data-total>---</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
 						<div class="col-md-7">
 							<form id="address-form">
 								<h3>Contact information</h3>
@@ -224,28 +204,6 @@ get_header(); ?>
 									</div>
 								</div>
 							</form>
-						</div>
-						<div class="col-md-5">
-							<h3>Your order</h3>
-							<div class="form-section__cart-list-container">
-								<ul class="cart-list"></ul>
-								<div class="total-block">
-									<div class="total-block__style-line"></div>
-									<div class="total-block__info-row">
-										<div class="total-block__name"><span>Tax </span></div>
-										<div class="total-block__price"><span data-tax>---</span></div>
-									</div>
-									<div class="total-block__info-row">
-										<div class="total-block__name"> <span>Shipping</span></div>
-										<div class="total-block__price" data-shipping> <span data-shipping>---</span></div>
-									</div>
-									<div class="total-block__style-line"></div>
-									<div class="total-block__price-row">
-										<div class="total-block__name"><span>Total</span></div>
-										<div class="total-block__price large"><span data-total>---</span></div>
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
