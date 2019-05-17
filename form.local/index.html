@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<body>
+		<form id="lp_form" method="post" action="https://track.geek3.io/post.do">
+
+			<p>
+				<input type="text" name="first_name" placeholder="First Name" required>
+			</p>
+			<p>
+				<input type="text" name="last_name" placeholder="Last Name" required>
+			</p>
+			<p>
+				<input type="tel" name="phone_home" placeholder="Phone Home">
+			</p>
+			<p>
+				<input type="tel" name="phone_cell" placeholder="Phone Cell" required>
+			</p>
+			<p>
+				<input type="tel" name="phone_work" placeholder="Phone Work">
+			</p>
+			<p>
+				<input type="num" name="phone_ext" placeholder="Phone Ext">
+			</p>
+			<p>
+				<input type="text" name="address" placeholder="Address">
+			</p>
+			<p>
+				<input type="text" name="address2" placeholder="Unit / Apt / Suite">
+			</p>
+			<p>
+				<input type="text" name="city" placeholder="City">
+			</p>
+			<p>
+				<input type="text" name="state" placeholder="State">
+			</p>
+			<p>
+				<input type="text" name="zip_code" placeholder="Zip Code">
+			</p>
+			<p>
+				<input type="text" name="county" placeholder="County">
+			</p>
+			<p>
+				<input type="text" name="country" placeholder="Country">
+			</p>
+			<p>
+				<input type="email" name="email_address" placeholder="Mail E-Mail Address" required>
+			</p>
+			<p>
+				<input type="date" name="dob" placeholder="Date of Birth">
+			</p>
+			<p>
+				<input type="text" name="ip_address" placeholder="IP Address">
+			</p>
+
+
+			<input type="hidden" name="lp_offer_id" value="36" />
+			<input type="hidden" name="lp_campaign_id" value="5cdc18ea55982" />
+			<!-- The rest of the fields name must match what you have set in the vertical -->
+			<input type="hidden" name="lp_redirect_url" value="" />
+			<!-- lp_redirect_url: Optional redirect url when the lead is accepted -->
+			<input type="hidden" name="lp_redirect_fail_url" value="" />
+			<!-- lp_redirect_fail_url: Optional redirect url when the lead is rejected. -->
+
+			<input type="hidden" name="lp_test" value="1" />
+
+			<p><input type="submit"></p>
+		</form>
+
+		<script>
+			(function(){
+
+				var telMask = document.querySelectorAll('[type="tel"]');
+				for (var i = 0, len = telMask.length; i < len; i++) {
+					telMask[i].addEventListener('input', function(e){
+						var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+						e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+					});
+				}
+
+				// $.get("http://ipinfo.io", function(response) {
+				// 	alert(response.city +' - '+ response.region +' - '+ response.country);
+				// }, "jsonp");
+
+				function location(){
+					var request = new XMLHttpRequest();
+					request.open('GET', 'http://ipinfo.io', true);
+					request.onload = function(data) {
+						// var data = JSON.stringify(request.responseText);
+						console.log(JSON(data));
+					};
+					request.send();
+				}location();
+
+			})();
+		</script>
+
+	</body>
+</html>

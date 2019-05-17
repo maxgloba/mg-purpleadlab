@@ -1,0 +1,247 @@
+@import 'reset';
+@import 'fonts';
+@import 'bootstrap-grid';
+@import 'slick';
+
+body, html{
+	color:#000;
+	line-height: 1.3;
+	font-size: 14px;
+	background-color: #fff;
+}
+
+main{
+	background: url('../img/main-bg.jpg') no-repeat center center/100% 100%;
+	position: fixed;
+	left: 0; right: 0;
+	top: 0; bottom: 0;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+.earth{
+	background: url('../img/bg.jpg') no-repeat center center/cover;
+	position: absolute;
+	left: 0; right: 0;
+	top: 0; bottom: 0;
+	z-index: 1;
+	padding-top: 62px;
+	padding-left: 9.15%;
+	.content{
+		position: relative;
+		z-index: 2;
+	}
+	.logo{
+		display: block;
+		width: 140px;
+		margin-bottom: 90px;
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+	h1{
+		color: #FFF;
+		font-family: Dollar;
+		font-size: 72px;
+		letter-spacing: 5.12px;
+		line-height: 71px;
+		margin-bottom: 60px;
+		span{
+			display: block;
+		}
+	}
+	p{
+		color: #FFF;
+		font-family: Montserrat;
+		font-size: 16px;
+		line-height: 20px;
+		margin-bottom: 90px;
+		span{
+			display: block;
+		}
+	}
+	.btn{
+		height: 48px;
+		width: 237px;
+		background-color: #007236;
+		border-radius: 48px;
+		text-transform: uppercase;
+		color: #FFF;
+		font-family: Montserrat;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 24px;
+		text-align: center;
+		border:none;
+		transition: .3s ease-in-out;
+		&:hover{
+			opacity: .8;
+		}
+	}
+	video.earth-animation{
+		position: absolute;
+		right: 0;
+		top: 5%;
+		bottom: 5%;
+		height: calc(100vh - 10%);
+		width: auto;
+	}
+	.brand-list{
+		position: absolute;
+		bottom: 5.88%;
+		left: 9.15%;
+		right: 9.15%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-content: space-between;
+		li{
+			text-align: center;
+			img{
+				display: block;
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+.ques{
+	display: none;
+	z-index: 2;
+	padding: 0 17.5%;
+	transition: 1s ease-in-out;
+	&__points{
+		color: #161619;
+		font-size: 16px;
+		font-weight: 700;
+		letter-spacing: 1.5px;
+		line-height: 20px;
+		margin-bottom: 15px;
+	}
+	ol{
+		padding-top: 30px;
+		max-width: 455px;
+		list-style: none; counter-reset: li;
+		&.col-md-6{
+			padding-left: 7.5px;
+			padding-right: 7.5px;
+		}
+		li{
+			counter-increment: li;
+			margin-bottom: 14px;
+			box-sizing: border-box;
+			height: 76px;
+			line-height: 76px;
+			width: 100%;
+			border-radius: 4px;
+			background-color: #FBFAF5;
+			border: 2px solid #E8EAE5;
+			padding-left: 120px;
+			color: #161619;
+			font-size: 20px;
+			letter-spacing: 1.88px;
+			cursor: pointer;
+			b{
+				line-height: 1;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			span{
+				display: block;
+				opacity: 0.75;
+				color: #161619;
+				font-size: 16px;
+				letter-spacing: 1.5px;
+				line-height: 20px;
+				font-weight: 400;
+			}
+			&::before{
+				content: counter(li, upper-alpha);
+				color: red;
+				display: block;
+				width: 48px;
+				height: 48px;
+				line-height: 48px;
+				left: 35px;
+				top: 50%;
+				transform:translate(0, -50%);
+				position: absolute;
+				top: 50%;
+				border-radius: 60px;
+				border: 1px solid #161619;
+				color: #161619;
+				font-size: 20px;
+				font-weight: 700;
+				text-align: center;
+				transition: .3s ease-in-out;
+			}
+			&:hover, &.active{
+				&::before{
+					background-color: #007236;
+					color: #fff;
+				}
+			}
+			&.button{
+				background: none;
+				border:none;
+				padding-left: 0;
+				text-align: center;
+				background-color: #007236;
+				color: #fff;
+				font-weight: 700;
+				transition: .3s ease-in-out;
+				display: none;
+				&::before{
+					display: none;
+				}
+				&:hover{
+					opacity: .8;
+				}
+			}
+		}
+	}
+	h1{
+		color: #161619;
+		font-family: Dollar;
+		font-size: 36px;
+		letter-spacing: 5.9px;
+		line-height: 41px;
+		span{
+			display: block;
+		}
+	}
+}
+
+.fadeIn{
+	opacity: 0;
+	transition: opacity .25s ease-in-out;
+}
+.fadeInRight{
+	opacity: 0;
+	transform:translateX(20px);
+	transition: .35s ease-in-out, opacity .25s ease-in-out;
+}
+.fadeInBottom{
+	opacity: 0;
+	transform:translateY(20px);
+	transition: .35s ease-in-out, opacity .25s ease-in-out;
+}
+.ques, .earth{
+	&.active{
+		.fadeInRight{
+			opacity: 1;
+			transform:translateX(0px);
+		}
+		.fadeInBottom{
+			opacity: 1;
+			transform:translateY(0px);
+		}
+		.fadeIn{
+			opacity: 1;
+		}
+	}
+}
